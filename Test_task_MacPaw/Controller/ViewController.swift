@@ -11,9 +11,11 @@ class ViewController: UIViewController {
     
     let networkManager = NetworkManager()
     
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         networkManager.performRequest(urlString: networkManager.urlEquipment)
 
     }

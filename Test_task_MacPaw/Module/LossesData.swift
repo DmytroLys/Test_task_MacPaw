@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 
-struct LossesPersonnelData: Codable {
+struct LossesPersonnelData: Decodable {
     
     var date: String
     var day: Int
@@ -17,11 +17,11 @@ struct LossesPersonnelData: Codable {
     var POW: Int
 }
 
-struct LossesEquipmentData: Codable {
+struct LossesEquipmentData: Decodable {
     
     
     enum CodingKeys: String, CodingKey {
-        case date,day, aircraft, helicopter, tank, drone
+        case date, day, aircraft, helicopter, tank, drone
             
             case apc = "APC"
             case fieldArtillery = "field artillery"
@@ -35,8 +35,32 @@ struct LossesEquipmentData: Codable {
             case cruiseMissiles =  "cruise missiles"
         }
     
+    enum StringOrInt: Decodable {
+        case string(String)
+        case int(Int)
+        
+        init(from decoder: Decoder) throws {
+            if let int = try?
+                decoder.singleValueContainer().decode(Int.self) {
+                self = .int(int)
+                return
+            }
+            if let string = try?
+                decoder.singleValueContainer().decode(String.self) {
+                self = .string(string)
+                return
+            }
+            
+            throw Error.couldNotFindStringOrDouble
+        }
+        
+        enum Error: Swift.Error {
+                case couldNotFindStringOrDouble
+            }
+    }
+    
     var date :String
-    var day: Int?
+    var day: StringOrInt
     var aircraft : Int
     var helicopter: Int
     var tank : Int
@@ -47,14 +71,10 @@ struct LossesEquipmentData: Codable {
     var militaryAuto : Int
     var fuelTank : Int
     var antiAircraftWarfare : Int
-    var specialEquipment : Int
-    var mobileSRBM : Int
-    var vehiclesAndFuel : Int
-    var cruiseMissiles : Int
-
-    
-    
-
+    var specialEquipment : Int?
+    var mobileSRBM : Int?
+    var vehiclesAndFuel : Int?
+    var cruiseMissiles : Int?
 }
 
 
