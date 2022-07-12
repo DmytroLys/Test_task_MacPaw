@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 
-struct LossesPersonnelData: Decodable {
+struct LossesPersonnelData: Codable {
     
     var date: String
     var day: Int
@@ -17,11 +17,11 @@ struct LossesPersonnelData: Decodable {
     var POW: Int
 }
 
-struct LossesEquipmentData: Decodable {
+struct LossesEquipmentData: Codable {
     
     
     enum CodingKeys: String, CodingKey {
-        case date, day, aircraft, helicopter, tank, drone
+        case date,day, aircraft, helicopter, tank, drone
             
             case apc = "APC"
             case fieldArtillery = "field artillery"
@@ -35,22 +35,22 @@ struct LossesEquipmentData: Decodable {
             case cruiseMissiles =  "cruise missiles"
         }
     
-    var date :String?
+    var date :String
     var day: Int?
-    var aircraft : Int?
-    var helicopter: Int?
-    var tank : Int?
-    var drone : Int?
-    var apc : Int?
-    var fieldArtillery : Int?
-    var mrl : Int?
-    var militaryAuto : Int?
-    var fuelTank : Int?
-    var antiAircraftWarfare : Int?
-    var specialEquipment : Int?
-    var mobileSRBM : Int?
-    var vehiclesAndFuel : Int?
-    var cruiseMissiles : Int?
+    var aircraft : Int
+    var helicopter: Int
+    var tank : Int
+    var drone : Int
+    var apc : Int
+    var fieldArtillery : Int
+    var mrl : Int
+    var militaryAuto : Int
+    var fuelTank : Int
+    var antiAircraftWarfare : Int
+    var specialEquipment : Int
+    var mobileSRBM : Int
+    var vehiclesAndFuel : Int
+    var cruiseMissiles : Int
 
     
     

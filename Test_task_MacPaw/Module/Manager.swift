@@ -32,10 +32,20 @@ struct NetworkManager {
     func parseJson(lostPersonnelData:Data){
         let decoder = JSONDecoder()
         do {
-            let decodedData: [LossesEquipmentData] = try decoder.decode([LossesEquipmentData].self, from: lostPersonnelData)
+            let correctData = hadndleNanValue(data: lostPersonnelData)
+            let decodedData: [LossesEquipmentData] = try decoder.decode([LossesEquipmentData].self, from: correctData)
             print(decodedData)
         } catch {
             print(error)
         }
+    }
+    
+    func hadndleNanValue (data:Data) -> Data {
+        
+        let dataString = String(decoding: data, as: UTF8.self)
+        let correctString = dataString.replacingOccurrences(of: "NaN", with: "-1")
+        let correctData = correctString.data(using: .utf8)!
+        
+        return correctData
     }
 }
