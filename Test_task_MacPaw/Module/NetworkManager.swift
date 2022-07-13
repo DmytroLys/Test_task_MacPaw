@@ -19,7 +19,7 @@ struct NetworkManager {
     
     var delegate : NetworkManagerDelegate?
     
-    func performRequest (with urlString: String){
+    func performRequest (with urlString: String, completed: @escaping ()-> ()){
         if let url = URL(string:urlString) {
             let session = URLSession(configuration: .default)
             let task = session.dataTask(with: url) { data, response, error in
@@ -29,9 +29,19 @@ struct NetworkManager {
                 }
                 if let safeData = data {
                     if urlString == urlPersonnel{
-                        parseJson(lostPersonnelData: safeData)
+                        if let loss =  parseJson(lossPersonnelData: safeData) {
+                            delegate?.getData(self, array: loss)
+                            DispatchQueue.main.async {
+                                completed()
+                            }
+                        }
                     } else {
-                        parseJson(lostEquipmentData: safeData)
+                        if let loss =  parseJson(lossEquipmentData: safeData) {
+                            delegate?.getData(self, array: loss)
+                            DispatchQueue.main.async {
+                                completed()
+                            }
+                        }
                     }
                 }
             }
@@ -39,34 +49,32 @@ struct NetworkManager {
         }
     }
     
-    func parseJson(lostPersonnelData: Data){
+    func parseJson(lossPersonnelData: Data) -> [LossesPersonnelData]?{
         let decoder = JSONDecoder()
         do {
             
-            let correctData = hadndleNanValue(inputData: lostPersonnelData)
+            let correctData = hadndleNanValue(inputData: lossPersonnelData)
             let decodedData = try decoder.decode([LossesPersonnelData].self, from: correctData)
             
-//            delegate?.getData(self, array: decodedData)
-            
-            print(decodedData)
-            
-            
+            return decodedData
             
         } catch {
             print(error)
+            return nil
         }
     }
     
-    func parseJson(lostEquipmentData: Data) {
+    func parseJson(lossEquipmentData: Data) -> [LossesEquipmentData]? {
         let decoder = JSONDecoder()
         do {
-            let correctData = hadndleNanValue(inputData: lostEquipmentData)
+            let correctData = hadndleNanValue(inputData: lossEquipmentData)
             let decodedData = try decoder.decode([LossesEquipmentData].self, from: correctData)
             
-            print(decodedData)
+            return decodedData
             
         } catch {
             print(error)
+            return nil
         }
     }
     

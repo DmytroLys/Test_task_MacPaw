@@ -25,7 +25,17 @@ struct LossesEquipmentData: Decodable {
         case cruiseMissiles =  "cruise missiles"
     }
     
-    enum StringOrInt: Decodable {
+    enum StringOrInt: Decodable, CustomStringConvertible {
+        
+        var description: String {
+            switch self {
+            case .string(let string):
+                return string
+            case .int(let int):
+                return String(int)
+            }
+        }
+        
         case string(String)
         case int(Int)
         
