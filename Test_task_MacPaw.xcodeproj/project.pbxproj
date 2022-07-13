@@ -14,7 +14,9 @@
 		662797DF287C256C00BF4F63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 662797DE287C256C00BF4F63 /* Assets.xcassets */; };
 		662797E2287C256C00BF4F63 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662797E0287C256C00BF4F63 /* LaunchScreen.storyboard */; };
 		662797F1287C54CB00BF4F63 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662797F0287C54CB00BF4F63 /* NetworkManager.swift */; };
-		662797F3287C595600BF4F63 /* LossesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662797F2287C595600BF4F63 /* LossesData.swift */; };
+		662797F3287C595600BF4F63 /* LossesPersonnelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662797F2287C595600BF4F63 /* LossesPersonnelData.swift */; };
+		66E07014287ED71400B77F22 /* LossesEquipmentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E07013287ED71400B77F22 /* LossesEquipmentData.swift */; };
+		66E07018287F40A900B77F22 /* LossesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E07017287F40A900B77F22 /* LossesModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +29,9 @@
 		662797E1287C256C00BF4F63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		662797E3287C256C00BF4F63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		662797F0287C54CB00BF4F63 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		662797F2287C595600BF4F63 /* LossesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LossesData.swift; sourceTree = "<group>"; };
+		662797F2287C595600BF4F63 /* LossesPersonnelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LossesPersonnelData.swift; sourceTree = "<group>"; };
+		66E07013287ED71400B77F22 /* LossesEquipmentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LossesEquipmentData.swift; sourceTree = "<group>"; };
+		66E07017287F40A900B77F22 /* LossesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LossesModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +80,9 @@
 			isa = PBXGroup;
 			children = (
 				662797F0287C54CB00BF4F63 /* NetworkManager.swift */,
-				662797F2287C595600BF4F63 /* LossesData.swift */,
+				662797F2287C595600BF4F63 /* LossesPersonnelData.swift */,
+				66E07013287ED71400B77F22 /* LossesEquipmentData.swift */,
+				66E07017287F40A900B77F22 /* LossesModel.swift */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -168,11 +174,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				662797F3287C595600BF4F63 /* LossesData.swift in Sources */,
+				662797F3287C595600BF4F63 /* LossesPersonnelData.swift in Sources */,
 				662797DA287C256800BF4F63 /* ViewController.swift in Sources */,
 				662797D6287C256800BF4F63 /* AppDelegate.swift in Sources */,
 				662797D8287C256800BF4F63 /* SceneDelegate.swift in Sources */,
 				662797F1287C54CB00BF4F63 /* NetworkManager.swift in Sources */,
+				66E07014287ED71400B77F22 /* LossesEquipmentData.swift in Sources */,
+				66E07018287F40A900B77F22 /* LossesModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

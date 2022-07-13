@@ -1,39 +1,29 @@
 //
-//  LostsData.swift
+//  LossesEquipmentData.swift
 //  Test_task_MacPaw
 //
-//  Created by Dmytro on 11.07.2022.
+//  Created by Dmytro on 13.07.2022.
 //
 
 import Foundation
-import UIKit
-
-
-struct LossesPersonnelData: Decodable {
-    
-    var date: String
-    var day: Int
-    var personnel:Int
-    var POW: Int
-}
 
 struct LossesEquipmentData: Decodable {
     
     
     enum CodingKeys: String, CodingKey {
         case date, day, aircraft, helicopter, tank, drone
-            
-            case apc = "APC"
-            case fieldArtillery = "field artillery"
-            case mrl = "MRL"
-            case militaryAuto = "military auto"
-            case fuelTank = "fuel tank"
-            case antiAircraftWarfare = "anti-aircraft warfare"
-            case specialEquipment = "special equipment"
-            case mobileSRBM = "mobile SRBM system"
-            case vehiclesAndFuel = "vehicles and fuel tanks"
-            case cruiseMissiles =  "cruise missiles"
-        }
+        
+        case apc = "APC"
+        case fieldArtillery = "field artillery"
+        case mrl = "MRL"
+        case militaryAuto = "military auto"
+        case fuelTank = "fuel tank"
+        case antiAircraftWarfare = "anti-aircraft warfare"
+        case specialEquipment = "special equipment"
+        case mobileSRBM = "mobile SRBM system"
+        case vehiclesAndFuel = "vehicles and fuel tanks"
+        case cruiseMissiles =  "cruise missiles"
+    }
     
     enum StringOrInt: Decodable {
         case string(String)
@@ -55,8 +45,8 @@ struct LossesEquipmentData: Decodable {
         }
         
         enum Error: Swift.Error {
-                case couldNotFindStringOrDouble
-            }
+            case couldNotFindStringOrDouble
+        }
     }
     
     var date :String
@@ -76,5 +66,3 @@ struct LossesEquipmentData: Decodable {
     var vehiclesAndFuel : Int?
     var cruiseMissiles : Int?
 }
-
-

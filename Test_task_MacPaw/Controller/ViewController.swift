@@ -7,17 +7,27 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-    
-    let networkManager = NetworkManager()
+class ViewController: UIViewController, NetworkManagerDelegate {
     
     
-
+    var networkManager = NetworkManager()
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        networkManager.performRequest(urlString: networkManager.urlEquipment)
-
+        networkManager.delegate = self
+        networkManager.performRequest(with: networkManager.urlPersonnel)
+        networkManager.performRequest(with: networkManager.urlEquipment)
+        
     }
+    
+    func getData(_ networkManager:NetworkManager, array: [LossesPersonnelData]) {
+        
+        
+    }
+    
+    
 }
 

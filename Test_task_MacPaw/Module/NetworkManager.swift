@@ -8,12 +8,18 @@
 import Foundation
 import UIKit
 
+protocol NetworkManagerDelegate {
+    func getData(_ networkManager:NetworkManager, array: [LossesPersonnelData])
+}
+
 struct NetworkManager {
     
     let urlPersonnel = "https://raw.githubusercontent.com/MacPaw/2022-Ukraine-Russia-War-Dataset/main/data/russia_losses_personnel.json"
     let urlEquipment = "https://raw.githubusercontent.com/MacPaw/2022-Ukraine-Russia-War-Dataset/main/data/russia_losses_equipment.json"
     
-    func performRequest (urlString: String){
+    var delegate : NetworkManagerDelegate?
+    
+    func performRequest (with urlString: String){
         if let url = URL(string:urlString) {
             let session = URLSession(configuration: .default)
             let task = session.dataTask(with: url) { data, response, error in
@@ -22,19 +28,43 @@ struct NetworkManager {
                     return
                 }
                 if let safeData = data {
-                    parseJson(lostPersonnelData: safeData)
+                    if urlString == urlPersonnel{
+                        parseJson(lostPersonnelData: safeData)
+                    } else {
+                        parseJson(lostEquipmentData: safeData)
+                    }
                 }
             }
             task.resume()
         }
     }
     
-    func parseJson(lostPersonnelData:Data){
+    func parseJson(lostPersonnelData: Data){
         let decoder = JSONDecoder()
         do {
+            
             let correctData = hadndleNanValue(inputData: lostPersonnelData)
-            let decodedData: [LossesEquipmentData] = try decoder.decode([LossesEquipmentData].self, from: correctData)
-            print(decodedData[0].date)
+            let decodedData = try decoder.decode([LossesPersonnelData].self, from: correctData)
+            
+//            delegate?.getData(self, array: decodedData)
+            
+            print(decodedData)
+            
+            
+            
+        } catch {
+            print(error)
+        }
+    }
+    
+    func parseJson(lostEquipmentData: Data) {
+        let decoder = JSONDecoder()
+        do {
+            let correctData = hadndleNanValue(inputData: lostEquipmentData)
+            let decodedData = try decoder.decode([LossesEquipmentData].self, from: correctData)
+            
+            print(decodedData)
+            
         } catch {
             print(error)
         }
@@ -49,4 +79,4 @@ struct NetworkManager {
         return correctData
     }
 }
-    
+
