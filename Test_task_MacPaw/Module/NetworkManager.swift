@@ -9,8 +9,7 @@ import Foundation
 import UIKit
 
 protocol NetworkManagerDelegate {
-    func getPData(_ networkManager:NetworkManager, array: [LossesPersonnelData])
-    func getEqData(_ networkManager:NetworkManager, array: [LossesEquipmentData])
+    func getData<T>(_ networkManager:NetworkManager, array: [T])
 }
 
 struct NetworkManager {
@@ -31,14 +30,14 @@ struct NetworkManager {
                 if let safeData = data {
                     if urlString == urlPersonnel{
                         if let pLoss =  parseJson(lossPersonnelData: safeData) {
-                            delegate?.getPData(self, array: pLoss)
+                            delegate?.getData(self, array: pLoss)
                             DispatchQueue.main.async {
                                 completed()
                             }
                         }
                     } else {
                         if let eqLoss =  parseJson(lossEquipmentData: safeData) {
-                            delegate?.getEqData(self, array: eqLoss)
+                            delegate?.getData(self, array: eqLoss)
                             DispatchQueue.main.async {
                                 completed()
                             }

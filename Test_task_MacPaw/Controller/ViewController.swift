@@ -24,26 +24,33 @@ class ViewController: UIViewController, NetworkManagerDelegate {
         tableView.dataSource = self
         networkManager.delegate = self
         networkManager.performRequest(with: networkManager.urlPersonnel) {
-            print("Done")
             self.tableView.reloadData()
         }
-        print(lossesPersonnel)
+
         networkManager.performRequest(with: networkManager.urlEquipment) {
-            print("Done")
             self.tableView.reloadData()
         }
         
     }
     
-    func getPData(_ networkManager:NetworkManager, array: [LossesPersonnelData]) {
-        lossesPersonnel = array
-        print(lossesPersonnel)
+    func getData<T>( _ networkManager : NetworkManager, array: [T])  {
+        if array is [LossesPersonnelData] {
+            let newArray = array as? [LossesPersonnelData]
+            lossesPersonnel = newArray!
+//            print(lossesPersonnel)
+        } else if array is [LossesEquipmentData] {
+            let newArray = array as? [LossesEquipmentData]
+            lossesEquipment = newArray!
+//            print(lossesEquipment)
+        } else {
+            return
+        }
     }
     
-    func getEqData(_ networkManager: NetworkManager, array: [LossesEquipmentData]) {
-        lossesEquipment = array
-        print(lossesEquipment)
-    }
+//    func getEqData(_ networkManager: NetworkManager, array: [LossesEquipmentData]) {
+//        lossesEquipment = array
+//        print(lossesEquipment)
+//    }
     
 }
 
