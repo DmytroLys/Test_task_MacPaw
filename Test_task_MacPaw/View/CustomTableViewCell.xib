@@ -20,16 +20,16 @@
                         <rect key="frame" x="15" y="10" width="265.5" height="105"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zvb-dh-2HZ" userLabel="NumberOfDaylabel">
-                                <rect key="frame" x="0.0" y="0.0" width="265.5" height="30"/>
+                                <rect key="frame" x="0.0" y="0.0" width="265.5" height="25"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="dDO-Ph-iAA"/>
+                                    <constraint firstAttribute="height" constant="25" id="dDO-Ph-iAA"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IgP-Qo-Dsl" userLabel="LossPersonnelLabel">
-                                <rect key="frame" x="0.0" y="40" width="265.5" height="65"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IgP-Qo-Dsl" userLabel="LossPersonnelLabel">
+                                <rect key="frame" x="0.0" y="35" width="265.5" height="70"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>

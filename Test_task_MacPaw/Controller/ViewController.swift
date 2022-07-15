@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController, NetworkManagerDelegate {
-
+    
     @IBOutlet var tableView: UITableView!
     
     
@@ -27,7 +27,7 @@ class ViewController: UIViewController, NetworkManagerDelegate {
         networkManager.performRequest(with: networkManager.urlPersonnel) {
             self.tableView.reloadData()
         }
-
+        
         networkManager.performRequest(with: networkManager.urlEquipment) {
             self.tableView.reloadData()
         }
@@ -38,11 +38,9 @@ class ViewController: UIViewController, NetworkManagerDelegate {
         if array is [LossesPersonnelData] {
             let newArray = array as? [LossesPersonnelData]
             lossesPersonnel = newArray!
-//            print(lossesPersonnel)
         } else if array is [LossesEquipmentData] {
             let newArray = array as? [LossesEquipmentData]
             lossesEquipment = newArray!
-//            print(lossesEquipment)
         } else {
             return
         }
@@ -60,7 +58,8 @@ class ViewController: UIViewController, NetworkManagerDelegate {
 extension ViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("You select cell")
+        self.performSegue(withIdentifier: "goToDetail", sender: self)
+        
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         lossesPersonnel.count
@@ -70,10 +69,18 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
             let currentData = lossesPersonnel[indexPath.row]
             cell.numberOfDayLabel.text = "Day: \(currentData.day.description)"
             cell.lossPersonelLabel.text = "~ \(currentData.personnel) invaders destroyed"
-                return cell
-            }
-            
-            return UITableViewCell()
+            return cell
+        }
+        
+        return UITableViewCell()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        if segue.identifier == "goToDetail" {
+            let destinationVC = segue.destination as! DetailViewController
+            destinationVC
+        }
     }
     
 }

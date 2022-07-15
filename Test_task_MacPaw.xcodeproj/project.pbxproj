@@ -18,6 +18,7 @@
 		66E07014287ED71400B77F22 /* LossesEquipmentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E07013287ED71400B77F22 /* LossesEquipmentData.swift */; };
 		66E0701D2881818400B77F22 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E0701B2881818400B77F22 /* CustomTableViewCell.swift */; };
 		66E0701E2881818400B77F22 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66E0701C2881818400B77F22 /* CustomTableViewCell.xib */; };
+		66E070242881CD2000B77F22 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E070232881CD2000B77F22 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		66E07013287ED71400B77F22 /* LossesEquipmentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LossesEquipmentData.swift; sourceTree = "<group>"; };
 		66E0701B2881818400B77F22 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		66E0701C2881818400B77F22 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
+		66E070232881CD2000B77F22 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 			children = (
 				662797D9287C256800BF4F63 /* ViewController.swift */,
 				66E0701B2881818400B77F22 /* CustomTableViewCell.swift */,
+				66E070232881CD2000B77F22 /* DetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 				662797D8287C256800BF4F63 /* SceneDelegate.swift in Sources */,
 				662797F1287C54CB00BF4F63 /* NetworkManager.swift in Sources */,
 				66E07014287ED71400B77F22 /* LossesEquipmentData.swift in Sources */,
+				66E070242881CD2000B77F22 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
