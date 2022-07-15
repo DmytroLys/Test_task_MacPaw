@@ -23,6 +23,7 @@ class ViewController: UIViewController, NetworkManagerDelegate {
         tableView.delegate = self
         tableView.dataSource = self
         networkManager.delegate = self
+        self.registerTableViewCells()
         networkManager.performRequest(with: networkManager.urlPersonnel) {
             self.tableView.reloadData()
         }
@@ -47,10 +48,12 @@ class ViewController: UIViewController, NetworkManagerDelegate {
         }
     }
     
-//    func getEqData(_ networkManager: NetworkManager, array: [LossesEquipmentData]) {
-//        lossesEquipment = array
-//        print(lossesEquipment)
-//    }
+    private func registerTableViewCells() {
+        let textFieldCell = UINib(nibName: "CustomTableViewCell",
+                                  bundle: nil)
+        self.tableView.register(textFieldCell,
+                                forCellReuseIdentifier: "CustomTableViewCell")
+    }
     
 }
 
@@ -63,9 +66,14 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
         lossesPersonnel.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel?.text = lossesPersonnel[indexPath.row].day.description
-        return cell
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "CustomTableViewCell") as? CustomTableViewCell {
+            let currentData = lossesPersonnel[indexPath.row]
+            cell.numberOfDayLabel.text = "Day: \(currentData.day.description)"
+            cell.lossPersonelLabel.text = "~ \(currentData.personnel) invaders destroyed"
+                return cell
+            }
+            
+            return UITableViewCell()
     }
     
 }

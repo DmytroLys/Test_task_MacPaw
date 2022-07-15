@@ -16,6 +16,8 @@
 		662797F1287C54CB00BF4F63 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662797F0287C54CB00BF4F63 /* NetworkManager.swift */; };
 		662797F3287C595600BF4F63 /* LossesPersonnelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662797F2287C595600BF4F63 /* LossesPersonnelData.swift */; };
 		66E07014287ED71400B77F22 /* LossesEquipmentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E07013287ED71400B77F22 /* LossesEquipmentData.swift */; };
+		66E0701D2881818400B77F22 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E0701B2881818400B77F22 /* CustomTableViewCell.swift */; };
+		66E0701E2881818400B77F22 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66E0701C2881818400B77F22 /* CustomTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		662797F0287C54CB00BF4F63 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		662797F2287C595600BF4F63 /* LossesPersonnelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LossesPersonnelData.swift; sourceTree = "<group>"; };
 		66E07013287ED71400B77F22 /* LossesEquipmentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LossesEquipmentData.swift; sourceTree = "<group>"; };
+		66E0701B2881818400B77F22 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		66E0701C2881818400B77F22 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				662797DB287C256800BF4F63 /* Main.storyboard */,
+				66E0701C2881818400B77F22 /* CustomTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -96,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				662797D9287C256800BF4F63 /* ViewController.swift */,
+				66E0701B2881818400B77F22 /* CustomTableViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -160,6 +166,7 @@
 			files = (
 				662797E2287C256C00BF4F63 /* LaunchScreen.storyboard in Resources */,
 				662797DF287C256C00BF4F63 /* Assets.xcassets in Resources */,
+				66E0701E2881818400B77F22 /* CustomTableViewCell.xib in Resources */,
 				662797DD287C256800BF4F63 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -174,6 +181,7 @@
 				662797F3287C595600BF4F63 /* LossesPersonnelData.swift in Sources */,
 				662797DA287C256800BF4F63 /* ViewController.swift in Sources */,
 				662797D6287C256800BF4F63 /* AppDelegate.swift in Sources */,
+				66E0701D2881818400B77F22 /* CustomTableViewCell.swift in Sources */,
 				662797D8287C256800BF4F63 /* SceneDelegate.swift in Sources */,
 				662797F1287C54CB00BF4F63 /* NetworkManager.swift in Sources */,
 				66E07014287ED71400B77F22 /* LossesEquipmentData.swift in Sources */,
