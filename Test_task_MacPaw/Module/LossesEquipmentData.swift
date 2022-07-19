@@ -68,8 +68,8 @@ struct LossesEquipmentData: Decodable {
     var apc : Int
     var fieldArtillery : Int
     var mrl : Int
-    var militaryAuto : Int
-    var fuelTank : Int
+    var militaryAuto : Int?
+    var fuelTank : Int?
     var antiAircraftWarfare : Int
     var specialEquipment : Int?
     var mobileSRBM : Int?

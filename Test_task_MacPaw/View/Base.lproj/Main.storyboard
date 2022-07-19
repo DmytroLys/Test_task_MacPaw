@@ -155,6 +155,7 @@
                     <connections>
                         <outlet property="lChangePersonnelLose" destination="yyY-Tw-C31" id="el4-qk-ux4"/>
                         <outlet property="lPersonnelLose" destination="D8x-2g-NtE" id="DQv-c5-yAq"/>
+                        <outlet property="tanksView" destination="DX3-hl-6qS" id="nGs-wD-CHd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jEP-Id-dbU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

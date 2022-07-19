@@ -19,6 +19,8 @@
 		66E0701D2881818400B77F22 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E0701B2881818400B77F22 /* CustomTableViewCell.swift */; };
 		66E0701E2881818400B77F22 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66E0701C2881818400B77F22 /* CustomTableViewCell.xib */; };
 		66E070242881CD2000B77F22 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E070232881CD2000B77F22 /* DetailViewController.swift */; };
+		66E1634A288708EF0072A3CA /* CGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E16349288708EF0072A3CA /* CGFloat.swift */; };
+		66E1634C288709440072A3CA /* CircleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E1634B288709440072A3CA /* CircleHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		66E0701B2881818400B77F22 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		66E0701C2881818400B77F22 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
 		66E070232881CD2000B77F22 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		66E16349288708EF0072A3CA /* CGFloat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGFloat.swift; sourceTree = "<group>"; };
+		66E1634B288709440072A3CA /* CircleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,7 @@
 				662797ED287C546300BF4F63 /* Module */,
 				662797EE287C546900BF4F63 /* View */,
 				662797EF287C547C00BF4F63 /* Controller */,
+				66E16348288707800072A3CA /* Helpers+Extensions */,
 				662797D5287C256800BF4F63 /* AppDelegate.swift */,
 				662797D7287C256800BF4F63 /* SceneDelegate.swift */,
 				662797DE287C256C00BF4F63 /* Assets.xcassets */,
@@ -107,6 +112,15 @@
 				66E070232881CD2000B77F22 /* DetailViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		66E16348288707800072A3CA /* Helpers+Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				66E16349288708EF0072A3CA /* CGFloat.swift */,
+				66E1634B288709440072A3CA /* CircleHelper.swift */,
+			);
+			path = "Helpers+Extensions";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,10 +195,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66E1634A288708EF0072A3CA /* CGFloat.swift in Sources */,
 				662797F3287C595600BF4F63 /* LossesPersonnelData.swift in Sources */,
 				662797DA287C256800BF4F63 /* ViewController.swift in Sources */,
 				662797D6287C256800BF4F63 /* AppDelegate.swift in Sources */,
 				66E0701D2881818400B77F22 /* CustomTableViewCell.swift in Sources */,
+				66E1634C288709440072A3CA /* CircleHelper.swift in Sources */,
 				662797D8287C256800BF4F63 /* SceneDelegate.swift in Sources */,
 				662797F1287C54CB00BF4F63 /* NetworkManager.swift in Sources */,
 				66E07014287ED71400B77F22 /* LossesEquipmentData.swift in Sources */,
