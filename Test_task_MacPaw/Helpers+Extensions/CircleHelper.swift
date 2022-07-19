@@ -9,12 +9,12 @@ import UIKit
 
 public struct CircleHelper {
     
-   private func createSegment(startAngle: CGFloat, endAngle: CGFloat, view: UIView) -> UIBezierPath {
-        return UIBezierPath(arcCenter: CGPoint(x: view.frame.midX, y: view.frame.midY-10), radius: 40, startAngle: startAngle.toRadians(), endAngle: endAngle.toRadians(), clockwise: true)
+    private func createSegment(startAngle: CGFloat, endAngle: CGFloat, view: UIView) -> UIBezierPath {
+        return UIBezierPath(arcCenter: CGPoint(x: view.bounds.midX, y: view.bounds.midY - 10), radius: 40, startAngle: startAngle.toRadians(), endAngle: endAngle.toRadians(), clockwise: true)
     }
     
     func createCircle(startAngle: CGFloat, endAngle: CGFloat, view:UIView) {
-        let segmentPath = createSegment(startAngle: startAngle, endAngle: endAngle, view: view)
+        let segmentPath = createSegment(startAngle: startAngle, endAngle: endAngle,view: view)
         let segmentLayer = CAShapeLayer()
         segmentLayer.path = segmentPath.cgPath
         segmentLayer.lineWidth = 5
