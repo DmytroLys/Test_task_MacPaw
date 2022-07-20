@@ -16,6 +16,9 @@ class ViewController: UIViewController, NetworkManagerDelegate {
     var lossesPersonnel = [LossesPersonnelData]()
     var lossesEquipment = [LossesEquipmentData]()
     
+    var currentRowPlData : LossesPersonnelData?
+    var currentRowElData: LossesEquipmentData?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -58,6 +61,8 @@ class ViewController: UIViewController, NetworkManagerDelegate {
 extension ViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        currentRowPlData = lossesPersonnel[indexPath.row]
+        currentRowElData = lossesEquipment[indexPath.row]
         self.performSegue(withIdentifier: "goToDetail", sender: self)
         
     }
@@ -79,7 +84,9 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
         super.prepare(for: segue, sender: sender)
         if segue.identifier == "goToDetail" {
             let destinationVC = segue.destination as! DetailViewController
-            destinationVC
+            destinationVC.currentDayPersonnelLose = currentRowPlData
+            destinationVC.currentDayEquipmentLose = currentRowElData
+            
         }
     }
     

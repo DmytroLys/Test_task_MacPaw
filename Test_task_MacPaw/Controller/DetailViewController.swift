@@ -22,6 +22,9 @@ class DetailViewController: UIViewController {
     @IBOutlet private var aircraftView: UIView!
     @IBOutlet private var helicopterView: UIView!
     
+    var currentDayPersonnelLose: LossesPersonnelData?
+    var currentDayEquipmentLose: LossesEquipmentData?
+    
     private let circleHelper = CircleHelper()
     
     
@@ -47,6 +50,19 @@ class DetailViewController: UIViewController {
 
         circleHelper.createInnerCircle(startAngle: 0, endAngle: 360, view: helicopterView)
         circleHelper.createCircle(startAngle: 270, endAngle: 630, view: helicopterView)
+        
+        if let Pdata = currentDayPersonnelLose {
+            lPersonnelLose.text = "\(Pdata.personnel)"
+        }
+        
+        if let Edata = currentDayEquipmentLose {
+            lTankLose.text = "\(Edata.tank)"
+            lAPCLose.text = "\(Edata.apc)"
+            lAircraftLose.text = "\(Edata.aircraft)"
+            lHelicopterLose.text = "\(Edata.helicopter)"
+        }
+        
+        
         
     }
     
