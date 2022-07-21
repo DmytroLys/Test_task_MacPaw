@@ -15,6 +15,8 @@
 		662797E2287C256C00BF4F63 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662797E0287C256C00BF4F63 /* LaunchScreen.storyboard */; };
 		662797F1287C54CB00BF4F63 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662797F0287C54CB00BF4F63 /* NetworkManager.swift */; };
 		662797F3287C595600BF4F63 /* LossesPersonnelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662797F2287C595600BF4F63 /* LossesPersonnelData.swift */; };
+		6643683028883EE100C4F378 /* Formatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6643682F28883EE100C4F378 /* Formatter+Extensions.swift */; };
+		6643683228883EF800C4F378 /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6643683128883EF800C4F378 /* Int+Extensions.swift */; };
 		66E07014287ED71400B77F22 /* LossesEquipmentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E07013287ED71400B77F22 /* LossesEquipmentData.swift */; };
 		66E0701D2881818400B77F22 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E0701B2881818400B77F22 /* CustomTableViewCell.swift */; };
 		66E0701E2881818400B77F22 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66E0701C2881818400B77F22 /* CustomTableViewCell.xib */; };
@@ -34,6 +36,8 @@
 		662797E3287C256C00BF4F63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		662797F0287C54CB00BF4F63 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		662797F2287C595600BF4F63 /* LossesPersonnelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LossesPersonnelData.swift; sourceTree = "<group>"; };
+		6643682F28883EE100C4F378 /* Formatter+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Formatter+Extensions.swift"; sourceTree = "<group>"; };
+		6643683128883EF800C4F378 /* Int+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
 		66E07013287ED71400B77F22 /* LossesEquipmentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LossesEquipmentData.swift; sourceTree = "<group>"; };
 		66E0701B2881818400B77F22 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		66E0701C2881818400B77F22 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
@@ -119,6 +123,8 @@
 			children = (
 				66E16349288708EF0072A3CA /* CGFloat.swift */,
 				66E1634B288709440072A3CA /* CircleHelper.swift */,
+				6643682F28883EE100C4F378 /* Formatter+Extensions.swift */,
+				6643683128883EF800C4F378 /* Int+Extensions.swift */,
 			);
 			path = "Helpers+Extensions";
 			sourceTree = "<group>";
@@ -204,6 +210,8 @@
 				662797D8287C256800BF4F63 /* SceneDelegate.swift in Sources */,
 				662797F1287C54CB00BF4F63 /* NetworkManager.swift in Sources */,
 				66E07014287ED71400B77F22 /* LossesEquipmentData.swift in Sources */,
+				6643683228883EF800C4F378 /* Int+Extensions.swift in Sources */,
+				6643683028883EE100C4F378 /* Formatter+Extensions.swift in Sources */,
 				66E070242881CD2000B77F22 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

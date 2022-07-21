@@ -13,8 +13,16 @@ class ViewController: UIViewController, NetworkManagerDelegate {
     
     
     var networkManager = NetworkManager()
-    var lossesPersonnel = [LossesPersonnelData]()
-    var lossesEquipment = [LossesEquipmentData]()
+    var lossesPersonnel = [LossesPersonnelData]() {
+        didSet{
+            lossesPersonnel.reverse()
+        }
+    }
+    var lossesEquipment = [LossesEquipmentData]() {
+        didSet{
+            lossesEquipment.reverse()
+        }
+    }
     
     var currentRowPlData : LossesPersonnelData?
     var currentRowElData: LossesEquipmentData?
@@ -73,7 +81,7 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "CustomTableViewCell") as? CustomTableViewCell {
             let currentData = lossesPersonnel[indexPath.row]
             cell.numberOfDayLabel.text = "Day: \(currentData.day.description)"
-            cell.lossPersonelLabel.text = "~ \(currentData.personnel) invaders destroyed"
+            cell.lossPersonelLabel.text = "~ \(currentData.personnel) окупантів знищено"
             return cell
         }
         

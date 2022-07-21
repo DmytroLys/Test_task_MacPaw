@@ -30,7 +30,7 @@ public struct CircleHelper {
     
    private func addAnimation(to layer: CALayer) {
         let drawAnimation = CABasicAnimation(keyPath: "strokeEnd")
-        drawAnimation.duration = 1.0
+        drawAnimation.duration = 1.5
         drawAnimation.repeatCount = 1.0
         drawAnimation.isRemovedOnCompletion = false
         drawAnimation.fromValue = 0

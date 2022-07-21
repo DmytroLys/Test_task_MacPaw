@@ -50,7 +50,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="6fw-8c-hJD">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6fw-8c-hJD">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Erg-Gt-VV7">
@@ -102,25 +102,22 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7o0-vd-Ji1">
-                                        <rect key="frame" x="0.0" y="165" width="414" height="200"/>
+                                        <rect key="frame" x="0.0" y="150" width="414" height="200"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="TOR-oW-DXT">
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="TOR-oW-DXT">
                                                 <rect key="frame" x="0.0" y="30" width="414" height="140"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DX3-hl-6qS">
-                                                        <rect key="frame" x="0.0" y="0.0" width="103" height="140"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="103.5" height="140"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Танки" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pJd-xP-5oM">
-                                                                <rect key="frame" x="33" y="110" width="37" height="20"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="37" id="reZ-vX-WYD"/>
-                                                                </constraints>
+                                                                <rect key="frame" x="33.5" y="110" width="36.5" height="20"/>
                                                                 <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="20"/>
                                                                 <color key="textColor" systemColor="systemGrayColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TkB-9g-Iqh">
-                                                                <rect key="frame" x="25" y="42.5" width="52.5" height="35"/>
+                                                                <rect key="frame" x="25.5" y="42.5" width="52.5" height="35"/>
                                                                 <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="35"/>
                                                                 <color key="textColor" name="ClayCreekColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -135,16 +132,16 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cdo-rL-3cp">
-                                                        <rect key="frame" x="104" y="0.0" width="102.5" height="140"/>
+                                                        <rect key="frame" x="103.5" y="0.0" width="103.5" height="140"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ВВМ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QPe-UD-I8C">
-                                                                <rect key="frame" x="37" y="110" width="28.5" height="20"/>
+                                                                <rect key="frame" x="37.5" y="110" width="28.5" height="20"/>
                                                                 <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="20"/>
                                                                 <color key="textColor" systemColor="systemGrayColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ww8-Ta-ba4">
-                                                                <rect key="frame" x="25" y="42.5" width="52.5" height="35"/>
+                                                                <rect key="frame" x="25.5" y="42.5" width="52.5" height="35"/>
                                                                 <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="35"/>
                                                                 <color key="textColor" name="ClayCreekColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -159,16 +156,16 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ibp-1W-oDE">
-                                                        <rect key="frame" x="207.5" y="0.0" width="103" height="140"/>
+                                                        <rect key="frame" x="207" y="0.0" width="103.5" height="140"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Літаки" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z2j-aB-JF2">
-                                                                <rect key="frame" x="30.5" y="110" width="42" height="20"/>
+                                                                <rect key="frame" x="31" y="110" width="42" height="20"/>
                                                                 <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="20"/>
                                                                 <color key="textColor" systemColor="systemGrayColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2yh-2F-9zt">
-                                                                <rect key="frame" x="25" y="42.5" width="52.5" height="35"/>
+                                                                <rect key="frame" x="25.5" y="42.5" width="52.5" height="35"/>
                                                                 <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="35"/>
                                                                 <color key="textColor" name="ClayCreekColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -183,16 +180,16 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S0y-VC-Jem">
-                                                        <rect key="frame" x="311.5" y="0.0" width="102.5" height="140"/>
+                                                        <rect key="frame" x="310.5" y="0.0" width="103.5" height="140"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Гелікоптери" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2YA-lK-YTJ">
-                                                                <rect key="frame" x="13" y="110" width="76.5" height="20"/>
+                                                                <rect key="frame" x="13.5" y="110" width="76.5" height="20"/>
                                                                 <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="20"/>
                                                                 <color key="textColor" systemColor="systemGrayColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P8b-Tx-Agd">
-                                                                <rect key="frame" x="25" y="42.5" width="52.5" height="35"/>
+                                                                <rect key="frame" x="25.5" y="42.5" width="52.5" height="35"/>
                                                                 <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="35"/>
                                                                 <color key="textColor" name="ClayCreekColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -207,6 +204,11 @@
                                                         </constraints>
                                                     </view>
                                                 </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="ibp-1W-oDE" firstAttribute="width" secondItem="Cdo-rL-3cp" secondAttribute="width" id="3WV-L4-gwr"/>
+                                                    <constraint firstItem="DX3-hl-6qS" firstAttribute="width" secondItem="Cdo-rL-3cp" secondAttribute="width" id="EOD-di-1tS"/>
+                                                    <constraint firstItem="S0y-VC-Jem" firstAttribute="width" secondItem="ibp-1W-oDE" secondAttribute="width" id="WSi-R9-7Nk"/>
+                                                </constraints>
                                             </stackView>
                                         </subviews>
                                         <color key="backgroundColor" name="ClayCreekColor"/>
@@ -219,8 +221,19 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7VS-nV-Mnx">
-                                        <rect key="frame" x="0.0" y="380" width="414" height="394"/>
+                                        <rect key="frame" x="0.0" y="350" width="414" height="424"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ETE-Ie-XcV">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="424"/>
+                                            </stackView>
+                                        </subviews>
                                         <color key="backgroundColor" name="ClayCreekColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="ETE-Ie-XcV" secondAttribute="trailing" id="0CI-uQ-MFb"/>
+                                            <constraint firstItem="ETE-Ie-XcV" firstAttribute="top" secondItem="7VS-nV-Mnx" secondAttribute="top" id="TV1-7c-InC"/>
+                                            <constraint firstItem="ETE-Ie-XcV" firstAttribute="leading" secondItem="7VS-nV-Mnx" secondAttribute="leading" id="dVF-8A-4Uh"/>
+                                            <constraint firstAttribute="bottom" secondItem="ETE-Ie-XcV" secondAttribute="bottom" id="fka-S2-rGb"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                             </stackView>

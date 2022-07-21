@@ -22,6 +22,10 @@ class DetailViewController: UIViewController {
     @IBOutlet private var aircraftView: UIView!
     @IBOutlet private var helicopterView: UIView!
     
+    @IBOutlet var firstTableView: UITableView!
+    @IBOutlet var secondTableView: UITableView!
+    
+    
     var currentDayPersonnelLose: LossesPersonnelData?
     var currentDayEquipmentLose: LossesEquipmentData?
     
@@ -30,7 +34,6 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
         navigationItem.title = "Статистика за 97 день війни"
         
@@ -52,14 +55,14 @@ class DetailViewController: UIViewController {
         circleHelper.createCircle(startAngle: 270, endAngle: 630, view: helicopterView)
         
         if let Pdata = currentDayPersonnelLose {
-            lPersonnelLose.text = "\(Pdata.personnel)"
+            lPersonnelLose.text = Pdata.personnel.formattedWithSeparator
         }
         
         if let Edata = currentDayEquipmentLose {
-            lTankLose.text = "\(Edata.tank)"
-            lAPCLose.text = "\(Edata.apc)"
-            lAircraftLose.text = "\(Edata.aircraft)"
-            lHelicopterLose.text = "\(Edata.helicopter)"
+            lTankLose.text = Edata.tank.formattedWithSeparator
+            lAPCLose.text = Edata.apc.formattedWithSeparator
+            lAircraftLose.text = Edata.aircraft.formattedWithSeparator
+            lHelicopterLose.text = Edata.helicopter.formattedWithSeparator
         }
         
         
@@ -69,4 +72,3 @@ class DetailViewController: UIViewController {
     
     
 }
-
