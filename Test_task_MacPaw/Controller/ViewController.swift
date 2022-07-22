@@ -39,6 +39,9 @@ class ViewController: UIViewController, NetworkManagerDelegate {
         tableView.dataSource = self
         networkManager.delegate = self
         
+        tableView.separatorStyle = .none
+        tableView.showsVerticalScrollIndicator = false
+        
         self.registerTableViewCells()
         networkManager.performRequest(with: networkManager.urlPersonnel) {
             self.tableView.reloadData()
@@ -72,6 +75,10 @@ class ViewController: UIViewController, NetworkManagerDelegate {
 }
 
 extension ViewController : UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
