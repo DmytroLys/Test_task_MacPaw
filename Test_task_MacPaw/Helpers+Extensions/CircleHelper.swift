@@ -10,7 +10,7 @@ import UIKit
 public struct CircleHelper {
     
     private func createSegment(startAngle: CGFloat, endAngle: CGFloat, view: UIView) -> UIBezierPath {
-        return UIBezierPath(arcCenter: CGPoint(x: view.bounds.midX, y: view.bounds.midY - 10), radius: 40, startAngle: startAngle.toRadians(), endAngle: endAngle.toRadians(), clockwise: true)
+        return UIBezierPath(arcCenter: CGPoint(x: view.bounds.midX , y: view.frame.midY - 10 ), radius: 40, startAngle: startAngle.toRadians(), endAngle: endAngle.toRadians(), clockwise: true)
     }
     
     func createCircle(startAngle: CGFloat, endAngle: CGFloat, view:UIView) {
@@ -20,6 +20,7 @@ public struct CircleHelper {
         segmentLayer.lineWidth = 5
         segmentLayer.strokeColor = UIColor.red.cgColor
         segmentLayer.fillColor = UIColor.clear.cgColor
+        segmentLayer.cornerRadius =  40
         
         addAnimation(to: segmentLayer)
         
@@ -46,6 +47,7 @@ public struct CircleHelper {
         segmentLayer.lineWidth = 5
         segmentLayer.strokeColor = UIColor.black.cgColor
         segmentLayer.fillColor = UIColor.clear.cgColor
+         segmentLayer.cornerRadius = 40
         
         view.layer.addSublayer(segmentLayer)
     }

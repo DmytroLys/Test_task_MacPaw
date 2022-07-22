@@ -41,9 +41,11 @@ class DetailViewController: UIViewController {
     private let circleHelper = CircleHelper()
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
- 
+        
+        navigationController?.navigationBar.isHidden = false
         navigationItem.title = "Статистика за \(currentDayPersonnelLose?.day.description ?? "") день війни"
         
         setupUI()

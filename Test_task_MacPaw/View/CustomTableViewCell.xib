@@ -27,15 +27,6 @@
                                     <constraint firstAttribute="width" constant="60" id="b0G-ur-xZv"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zvb-dh-2HZ" userLabel="NumberOfDaylabel">
-                                <rect key="frame" x="80" y="10" width="100" height="20"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="eeg-jP-taz"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="20"/>
-                                <color key="textColor" name="ClayCreekColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IgP-Qo-Dsl" userLabel="LossPersonnelLabel">
                                 <rect key="frame" x="80" y="60" width="150" height="19"/>
                                 <constraints>
@@ -45,15 +36,33 @@
                                 <color key="textColor" name="ClayCreekColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zvb-dh-2HZ" userLabel="NumberOfDaylabel">
+                                <rect key="frame" x="80" y="10" width="100" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="eeg-jP-taz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="20"/>
+                                <color key="textColor" name="ClayCreekColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="go" translatesAutoresizingMaskIntoConstraints="NO" id="8zD-Xu-fmg">
+                                <rect key="frame" x="258" y="44.5" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="ht6-dZ-VK9"/>
+                                    <constraint firstAttribute="width" constant="25" id="w44-7X-m1B"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" name="ChamoisColor"/>
                         <constraints>
                             <constraint firstItem="IgP-Qo-Dsl" firstAttribute="leading" secondItem="mSU-VJ-WUr" secondAttribute="trailing" constant="10" id="ChS-vv-z6a"/>
+                            <constraint firstAttribute="trailing" secondItem="8zD-Xu-fmg" secondAttribute="trailing" constant="5" id="EzS-GS-amD"/>
                             <constraint firstItem="Zvb-dh-2HZ" firstAttribute="leading" secondItem="mSU-VJ-WUr" secondAttribute="trailing" constant="10" id="GdT-9p-oM6"/>
                             <constraint firstItem="mSU-VJ-WUr" firstAttribute="leading" secondItem="qnI-w5-Eu2" secondAttribute="leading" constant="10" id="NKj-IF-Pck"/>
                             <constraint firstItem="mSU-VJ-WUr" firstAttribute="centerY" secondItem="qnI-w5-Eu2" secondAttribute="centerY" id="eBl-IH-dwh"/>
                             <constraint firstItem="IgP-Qo-Dsl" firstAttribute="top" secondItem="Zvb-dh-2HZ" secondAttribute="bottom" constant="30" id="eDj-QW-hWc"/>
                             <constraint firstItem="Zvb-dh-2HZ" firstAttribute="top" secondItem="qnI-w5-Eu2" secondAttribute="top" constant="10" id="taR-ev-OrK"/>
+                            <constraint firstItem="8zD-Xu-fmg" firstAttribute="centerY" secondItem="qnI-w5-Eu2" secondAttribute="centerY" id="xM4-d0-0fx"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -76,6 +85,7 @@
     </objects>
     <resources>
         <image name="activism" width="512" height="512"/>
+        <image name="go" width="512" height="512"/>
         <namedColor name="ChamoisColor">
             <color red="0.92941176470588238" green="0.87450980392156863" blue="0.70196078431372544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

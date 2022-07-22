@@ -17,6 +17,9 @@ class CustomTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         cellView.layer.cornerRadius = cellView.frame.size.height / 2.5
+        
+        
+        
     }
     
 }
