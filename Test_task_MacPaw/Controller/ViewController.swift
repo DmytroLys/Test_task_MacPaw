@@ -11,9 +11,12 @@ class ViewController: UIViewController, NetworkManagerDelegate {
     
     @IBOutlet var tableView: UITableView!
     
+    var brain = Brain()
+    
     
     var networkManager = NetworkManager()
-    var lossesPersonnel = [LossesPersonnelData]() {
+    var lossesPersonnel = [LossesPersonnelData]()
+    {
         didSet{
             lossesPersonnel.reverse()
         }
@@ -25,6 +28,7 @@ class ViewController: UIViewController, NetworkManagerDelegate {
     }
     
     var currentRowPlData : LossesPersonnelData?
+    var changeLose: String?
     var currentRowElData: LossesEquipmentData?
     
     override func viewDidLoad() {
@@ -34,6 +38,7 @@ class ViewController: UIViewController, NetworkManagerDelegate {
         tableView.delegate = self
         tableView.dataSource = self
         networkManager.delegate = self
+        
         self.registerTableViewCells()
         networkManager.performRequest(with: networkManager.urlPersonnel) {
             self.tableView.reloadData()
@@ -72,6 +77,11 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
         
         currentRowPlData = lossesPersonnel[indexPath.row]
         currentRowElData = lossesEquipment[indexPath.row]
+        if indexPath.row < lossesPersonnel.count-1 {
+            changeLose = brain.previousDay(currentDayStruct: currentRowPlData, previousDayStruct: lossesPersonnel[indexPath.row+1])
+        } else {
+            changeLose = ""
+        }
         self.performSegue(withIdentifier: "goToDetail", sender: self)
         
     }
@@ -95,6 +105,7 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
             let destinationVC = segue.destination as! DetailViewController
             destinationVC.currentDayPersonnelLose = currentRowPlData
             destinationVC.currentDayEquipmentLose = currentRowElData
+            destinationVC.changeLose = changeLose
             
         }
     }

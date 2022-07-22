@@ -18,7 +18,7 @@ public struct CircleHelper {
         let segmentLayer = CAShapeLayer()
         segmentLayer.path = segmentPath.cgPath
         segmentLayer.lineWidth = 5
-        segmentLayer.strokeColor = UIColor.blue.cgColor
+        segmentLayer.strokeColor = UIColor.red.cgColor
         segmentLayer.fillColor = UIColor.clear.cgColor
         
         addAnimation(to: segmentLayer)
@@ -44,7 +44,7 @@ public struct CircleHelper {
         let segmentLayer = CAShapeLayer()
         segmentLayer.path = segmentPath.cgPath
         segmentLayer.lineWidth = 5
-        segmentLayer.strokeColor = UIColor.yellow.cgColor
+        segmentLayer.strokeColor = UIColor.black.cgColor
         segmentLayer.fillColor = UIColor.clear.cgColor
         
         view.layer.addSublayer(segmentLayer)

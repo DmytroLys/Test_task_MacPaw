@@ -17,14 +17,14 @@ class DetailViewController: UIViewController {
     @IBOutlet private var lAircraftLose: UILabel!
     @IBOutlet private var lHelicopterLose: UILabel!
     
-    @IBOutlet var lFieldArtilllery: UILabel!
-    @IBOutlet var lAntiAircraftWarfare: UILabel!
-    @IBOutlet var lCruiseMissiles: UILabel!
-    @IBOutlet var lVehiclesAndFuel: UILabel!
-    @IBOutlet var lMrl: UILabel!
-    @IBOutlet var lDrone: UILabel!
-    @IBOutlet var lNavalShip: UILabel!
-    @IBOutlet var lSpecialEquipment: UILabel!
+    @IBOutlet private var lFieldArtilllery: UILabel!
+    @IBOutlet private var lAntiAircraftWarfare: UILabel!
+    @IBOutlet private var lCruiseMissiles: UILabel!
+    @IBOutlet private var lVehiclesAndFuel: UILabel!
+    @IBOutlet private var lMrl: UILabel!
+    @IBOutlet private var lDrone: UILabel!
+    @IBOutlet private var lNavalShip: UILabel!
+    @IBOutlet private var lSpecialEquipment: UILabel!
     
     
     @IBOutlet private var tanksView: UIView!
@@ -33,10 +33,10 @@ class DetailViewController: UIViewController {
     @IBOutlet private var helicopterView: UIView!
     
     
-    var ss: Int? = nil
     
     var currentDayPersonnelLose: LossesPersonnelData?
     var currentDayEquipmentLose: LossesEquipmentData?
+    var changeLose:String?
     
     private let circleHelper = CircleHelper()
     
@@ -50,17 +50,6 @@ class DetailViewController: UIViewController {
     }
     
     private func setupUI () {
-        circleHelper.createInnerCircle(startAngle: 0, endAngle: 360, view: tanksView)
-        circleHelper.createCircle(startAngle: 270, endAngle: 630, view: tanksView)
-        
-        circleHelper.createInnerCircle(startAngle: 0, endAngle: 360, view: bbmView)
-        circleHelper.createCircle(startAngle: 270, endAngle: 630, view: bbmView)
-        
-        circleHelper.createInnerCircle(startAngle: 0, endAngle: 360, view: aircraftView)
-        circleHelper.createCircle(startAngle: 270, endAngle: 630, view: aircraftView)
-        
-        circleHelper.createInnerCircle(startAngle: 0, endAngle: 360, view: helicopterView)
-        circleHelper.createCircle(startAngle: 270, endAngle: 630, view: helicopterView)
         
         if let Pdata = currentDayPersonnelLose {
             
@@ -68,6 +57,18 @@ class DetailViewController: UIViewController {
         }
         
         if let Edata = currentDayEquipmentLose {
+            
+            circleHelper.createInnerCircle(startAngle: 0, endAngle: 360, view: tanksView)
+            circleHelper.createCircle(startAngle: 270, endAngle: 500, view: tanksView)
+            
+            circleHelper.createInnerCircle(startAngle: 0, endAngle: 360, view: bbmView)
+            circleHelper.createCircle(startAngle: 270, endAngle: 500, view: bbmView)
+            
+            circleHelper.createInnerCircle(startAngle: 0, endAngle: 360, view: aircraftView)
+            circleHelper.createCircle(startAngle: 270, endAngle: 620, view: aircraftView)
+            
+            circleHelper.createInnerCircle(startAngle: 0, endAngle: 360, view: helicopterView)
+            circleHelper.createCircle(startAngle: 270, endAngle: 600, view: helicopterView)
             
             lTankLose.text = Edata.tank.formattedWithSeparator
             lAPCLose.text = Edata.apc.formattedWithSeparator
@@ -91,7 +92,8 @@ class DetailViewController: UIViewController {
             lDrone.text = Edata.drone.formattedWithSeparator
             lNavalShip.text = Edata.navalShip?.formattedWithSeparator
             lSpecialEquipment.text = Edata.specialEquipment?.formattedWithSeparator ?? "-"
-        
+            lChangePersonnelLose.text = changeLose ?? ""
+
     }
 
 }

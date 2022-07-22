@@ -5,7 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -57,73 +56,80 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="xlu-M9-hGj" userLabel="SVPersonnal">
-                                                <rect key="frame" x="15" y="20" width="200" height="125"/>
+                                                <rect key="frame" x="15" y="20" width="250" height="125"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Особисті втрати " textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hsp-u8-ZD6">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Особисті втрати " textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hsp-u8-ZD6" userLabel="Особисті втрати">
                                                         <rect key="frame" x="0.0" y="0.0" width="106.5" height="20"/>
                                                         <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="20"/>
-                                                        <color key="textColor" systemColor="systemGrayColor"/>
+                                                        <color key="textColor" name="ClayCreekColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wgS-Jj-AtZ">
-                                                        <rect key="frame" x="0.0" y="25" width="200" height="100"/>
+                                                        <rect key="frame" x="0.0" y="25" width="250" height="100"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D8x-2g-NtE">
                                                                 <rect key="frame" x="10" y="20" width="119.5" height="80"/>
                                                                 <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="80"/>
-                                                                <color key="textColor" name="ChamoisColor"/>
+                                                                <color key="textColor" name="ClayCreekColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yyY-Tw-C31">
+                                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yyY-Tw-C31">
                                                                 <rect key="frame" x="129.5" y="8" width="34.5" height="20"/>
                                                                 <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="20"/>
-                                                                <color key="textColor" name="ChamoisColor"/>
+                                                                <color key="textColor" name="ClayCreekColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
-                                                        <color key="backgroundColor" name="ClayCreekColor"/>
                                                         <constraints>
+                                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="yyY-Tw-C31" secondAttribute="trailing" constant="20" symbolic="YES" id="2SM-rY-K2C"/>
                                                             <constraint firstItem="D8x-2g-NtE" firstAttribute="leading" secondItem="wgS-Jj-AtZ" secondAttribute="leading" constant="10" id="XZi-Ej-81h"/>
                                                             <constraint firstItem="yyY-Tw-C31" firstAttribute="leading" secondItem="D8x-2g-NtE" secondAttribute="trailing" id="cii-Fo-1rM"/>
                                                             <constraint firstItem="yyY-Tw-C31" firstAttribute="top" secondItem="wgS-Jj-AtZ" secondAttribute="top" constant="8" id="eth-uy-07c"/>
                                                             <constraint firstAttribute="bottom" secondItem="D8x-2g-NtE" secondAttribute="bottom" id="hGt-Sc-TjB"/>
                                                             <constraint firstItem="D8x-2g-NtE" firstAttribute="top" secondItem="wgS-Jj-AtZ" secondAttribute="top" constant="20" id="vfo-uo-tww"/>
-                                                            <constraint firstAttribute="width" constant="200" id="ykT-Vj-bd7"/>
                                                         </constraints>
                                                     </view>
                                                 </subviews>
                                             </stackView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chmonia" translatesAutoresizingMaskIntoConstraints="NO" id="9qd-Ys-c3Q">
+                                                <rect key="frame" x="269.5" y="8" width="65" height="134"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="65" id="Bct-xK-uMi"/>
+                                                </constraints>
+                                            </imageView>
                                         </subviews>
-                                        <color key="backgroundColor" name="ClayCreekColor"/>
+                                        <color key="backgroundColor" name="ChamoisColor"/>
                                         <constraints>
                                             <constraint firstItem="xlu-M9-hGj" firstAttribute="top" secondItem="Erg-Gt-VV7" secondAttribute="top" constant="20" id="1sc-gq-CWc"/>
+                                            <constraint firstItem="9qd-Ys-c3Q" firstAttribute="centerX" secondItem="Erg-Gt-VV7" secondAttribute="centerX" constant="95" id="4S1-wv-fVP"/>
                                             <constraint firstItem="xlu-M9-hGj" firstAttribute="leading" secondItem="Erg-Gt-VV7" secondAttribute="leading" constant="15" id="9vZ-Vd-Q2q"/>
-                                            <constraint firstAttribute="height" constant="150" id="zkt-9j-hHF"/>
+                                            <constraint firstAttribute="bottom" secondItem="9qd-Ys-c3Q" secondAttribute="bottom" constant="8" id="F7g-5D-ZOO"/>
+                                            <constraint firstItem="9qd-Ys-c3Q" firstAttribute="top" secondItem="Erg-Gt-VV7" secondAttribute="top" constant="8" id="Z3l-RG-vZH"/>
+                                            <constraint firstAttribute="height" constant="150" id="dh1-uF-owL"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7o0-vd-Ji1">
                                         <rect key="frame" x="0.0" y="150" width="414" height="200"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="TOR-oW-DXT">
-                                                <rect key="frame" x="0.0" y="30" width="414" height="140"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DX3-hl-6qS">
-                                                        <rect key="frame" x="0.0" y="0.0" width="103.5" height="140"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="103.5" height="200"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Танки" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pJd-xP-5oM">
-                                                                <rect key="frame" x="33.5" y="110" width="36.5" height="20"/>
+                                                                <rect key="frame" x="33.5" y="140" width="36.5" height="20"/>
                                                                 <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="20"/>
-                                                                <color key="textColor" systemColor="systemGrayColor"/>
+                                                                <color key="textColor" name="ClayCreekColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TkB-9g-Iqh">
-                                                                <rect key="frame" x="25.5" y="42.5" width="52.5" height="35"/>
+                                                                <rect key="frame" x="25.5" y="72.5" width="52.5" height="35"/>
                                                                 <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="35"/>
                                                                 <color key="textColor" name="ClayCreekColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
-                                                        <color key="backgroundColor" name="ChamoisColor"/>
                                                         <constraints>
                                                             <constraint firstItem="TkB-9g-Iqh" firstAttribute="centerY" secondItem="DX3-hl-6qS" secondAttribute="centerY" constant="-10" id="4DX-oo-ovq"/>
                                                             <constraint firstItem="TkB-9g-Iqh" firstAttribute="centerX" secondItem="DX3-hl-6qS" secondAttribute="centerX" id="W75-WF-6Sv"/>
@@ -132,22 +138,21 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cdo-rL-3cp">
-                                                        <rect key="frame" x="103.5" y="0.0" width="103.5" height="140"/>
+                                                        <rect key="frame" x="103.5" y="0.0" width="103.5" height="200"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ВВМ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QPe-UD-I8C">
-                                                                <rect key="frame" x="37.5" y="110" width="28.5" height="20"/>
+                                                                <rect key="frame" x="37.5" y="140" width="28.5" height="20"/>
                                                                 <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="20"/>
-                                                                <color key="textColor" systemColor="systemGrayColor"/>
+                                                                <color key="textColor" name="ClayCreekColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ww8-Ta-ba4">
-                                                                <rect key="frame" x="25.5" y="42.5" width="52.5" height="35"/>
+                                                                <rect key="frame" x="25.5" y="72.5" width="52.5" height="35"/>
                                                                 <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="35"/>
                                                                 <color key="textColor" name="ClayCreekColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
-                                                        <color key="backgroundColor" name="ChamoisColor"/>
                                                         <constraints>
                                                             <constraint firstItem="Ww8-Ta-ba4" firstAttribute="centerX" secondItem="Cdo-rL-3cp" secondAttribute="centerX" id="364-bD-Z8o"/>
                                                             <constraint firstItem="QPe-UD-I8C" firstAttribute="centerX" secondItem="Cdo-rL-3cp" secondAttribute="centerX" id="4l9-do-WKI"/>
@@ -156,22 +161,21 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ibp-1W-oDE">
-                                                        <rect key="frame" x="207" y="0.0" width="103.5" height="140"/>
+                                                        <rect key="frame" x="207" y="0.0" width="103.5" height="200"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Літаки" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z2j-aB-JF2">
-                                                                <rect key="frame" x="31" y="110" width="42" height="20"/>
+                                                                <rect key="frame" x="31" y="140" width="42" height="20"/>
                                                                 <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="20"/>
-                                                                <color key="textColor" systemColor="systemGrayColor"/>
+                                                                <color key="textColor" name="ClayCreekColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2yh-2F-9zt">
-                                                                <rect key="frame" x="25.5" y="42.5" width="52.5" height="35"/>
+                                                                <rect key="frame" x="25.5" y="72.5" width="52.5" height="35"/>
                                                                 <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="35"/>
                                                                 <color key="textColor" name="ClayCreekColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
-                                                        <color key="backgroundColor" name="ChamoisColor"/>
                                                         <constraints>
                                                             <constraint firstItem="z2j-aB-JF2" firstAttribute="centerX" secondItem="ibp-1W-oDE" secondAttribute="centerX" id="3U3-Xi-eSd"/>
                                                             <constraint firstItem="2yh-2F-9zt" firstAttribute="centerY" secondItem="ibp-1W-oDE" secondAttribute="centerY" constant="-10" id="7dX-ol-Rup"/>
@@ -180,22 +184,21 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S0y-VC-Jem">
-                                                        <rect key="frame" x="310.5" y="0.0" width="103.5" height="140"/>
+                                                        <rect key="frame" x="310.5" y="0.0" width="103.5" height="200"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Гелікоптери" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2YA-lK-YTJ">
-                                                                <rect key="frame" x="13.5" y="110" width="76.5" height="20"/>
+                                                                <rect key="frame" x="13.5" y="140" width="76.5" height="20"/>
                                                                 <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="20"/>
-                                                                <color key="textColor" systemColor="systemGrayColor"/>
+                                                                <color key="textColor" name="ClayCreekColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P8b-Tx-Agd">
-                                                                <rect key="frame" x="25.5" y="42.5" width="52.5" height="35"/>
+                                                                <rect key="frame" x="25.5" y="72.5" width="52.5" height="35"/>
                                                                 <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="35"/>
                                                                 <color key="textColor" name="ClayCreekColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
-                                                        <color key="backgroundColor" name="ChamoisColor"/>
                                                         <constraints>
                                                             <constraint firstItem="P8b-Tx-Agd" firstAttribute="centerY" secondItem="S0y-VC-Jem" secondAttribute="centerY" constant="-10" id="aQX-kl-Hes"/>
                                                             <constraint firstItem="2YA-lK-YTJ" firstAttribute="centerY" secondItem="S0y-VC-Jem" secondAttribute="centerY" constant="50" id="bUY-Q1-m1z"/>
@@ -206,11 +209,11 @@
                                                 </subviews>
                                             </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" name="ClayCreekColor"/>
+                                        <color key="backgroundColor" name="ChamoisColor"/>
                                         <constraints>
-                                            <constraint firstItem="TOR-oW-DXT" firstAttribute="top" secondItem="7o0-vd-Ji1" secondAttribute="top" constant="30" id="0uj-dA-VMD"/>
-                                            <constraint firstAttribute="bottom" secondItem="TOR-oW-DXT" secondAttribute="bottom" constant="30" id="1rP-z8-uaU"/>
+                                            <constraint firstItem="TOR-oW-DXT" firstAttribute="top" secondItem="7o0-vd-Ji1" secondAttribute="top" id="45E-n7-rxJ"/>
                                             <constraint firstAttribute="height" constant="200" id="NMy-jZ-hTA"/>
+                                            <constraint firstAttribute="bottom" secondItem="TOR-oW-DXT" secondAttribute="bottom" id="T5O-01-C76"/>
                                             <constraint firstAttribute="trailing" secondItem="TOR-oW-DXT" secondAttribute="trailing" id="j4Q-Lz-zdz"/>
                                             <constraint firstItem="TOR-oW-DXT" firstAttribute="leading" secondItem="7o0-vd-Ji1" secondAttribute="leading" id="rgU-ZC-46N"/>
                                         </constraints>
@@ -218,141 +221,149 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7VS-nV-Mnx">
                                         <rect key="frame" x="0.0" y="350" width="414" height="424"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="XR5-t8-Qzi">
-                                                <rect key="frame" x="10" y="20" width="394" height="297"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="XR5-t8-Qzi">
+                                                <rect key="frame" x="50" y="0.0" width="314" height="297"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="qEf-gI-osh">
-                                                        <rect key="frame" x="0.0" y="0.0" width="394" height="74"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="bottom" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="qEf-gI-osh">
+                                                        <rect key="frame" x="0.0" y="0.0" width="314" height="73.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="863" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q7s-ln-pc6">
-                                                                <rect key="frame" x="0.0" y="57" width="98.5" height="17"/>
-                                                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="17"/>
-                                                                <nil key="textColor"/>
+                                                                <rect key="frame" x="0.0" y="54.5" width="74" height="19"/>
+                                                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="19"/>
+                                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.45000000000000001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Гармати" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="n2F-K6-jBi">
-                                                                <rect key="frame" x="98.5" y="57" width="98.5" height="17"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Гармати" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="n2F-K6-jBi">
+                                                                <rect key="frame" x="80" y="56.5" width="74" height="17"/>
                                                                 <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="17"/>
-                                                                <nil key="textColor"/>
+                                                                <color key="textColor" name="ClayCreekColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VFo-sJ-ZVa">
-                                                                <rect key="frame" x="197" y="57" width="98.5" height="17"/>
+                                                                <rect key="frame" x="160" y="56.5" width="74" height="17"/>
                                                                 <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="17"/>
-                                                                <nil key="textColor"/>
+                                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.45000000000000001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="РСЗВ" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="5x3-sR-ESL">
-                                                                <rect key="frame" x="295.5" y="57" width="98.5" height="17"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="РСЗВ" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="5x3-sR-ESL">
+                                                                <rect key="frame" x="240" y="56.5" width="74" height="17"/>
                                                                 <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="17"/>
-                                                                <nil key="textColor"/>
+                                                                <color key="textColor" name="ClayCreekColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
+                                                        <color key="backgroundColor" name="ChamoisColor"/>
                                                     </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="1oQ-R8-9f3">
-                                                        <rect key="frame" x="0.0" y="74" width="394" height="74.5"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="bottom" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="1oQ-R8-9f3">
+                                                        <rect key="frame" x="0.0" y="74.5" width="314" height="73.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="113" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5pp-xk-Yv2">
-                                                                <rect key="frame" x="0.0" y="57.5" width="98.5" height="17"/>
+                                                                <rect key="frame" x="0.0" y="56.5" width="74" height="17"/>
                                                                 <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="17"/>
-                                                                <nil key="textColor"/>
+                                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.45000000000000001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Засоби ППО" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="2sb-md-lFu">
-                                                                <rect key="frame" x="98.5" y="57.5" width="98.5" height="17"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Засоби ППО" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="2sb-md-lFu">
+                                                                <rect key="frame" x="80" y="56.5" width="74" height="17"/>
                                                                 <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="17"/>
-                                                                <nil key="textColor"/>
+                                                                <color key="textColor" name="ClayCreekColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="713" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LgU-ql-99i">
-                                                                <rect key="frame" x="197" y="57.5" width="98.5" height="17"/>
+                                                                <rect key="frame" x="160" y="56.5" width="74" height="17"/>
                                                                 <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="17"/>
-                                                                <nil key="textColor"/>
+                                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.45000000000000001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="БПЛА" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="5uU-jO-rCb">
-                                                                <rect key="frame" x="295.5" y="57.5" width="98.5" height="17"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="БПЛА" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="5uU-jO-rCb">
+                                                                <rect key="frame" x="240" y="56.5" width="74" height="17"/>
                                                                 <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="17"/>
-                                                                <nil key="textColor"/>
+                                                                <color key="textColor" name="ClayCreekColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
+                                                        <color key="backgroundColor" name="ChamoisColor"/>
                                                     </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="Vzk-Du-EgR">
-                                                        <rect key="frame" x="0.0" y="148.5" width="394" height="74"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="bottom" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Vzk-Du-EgR">
+                                                        <rect key="frame" x="0.0" y="149" width="314" height="73.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="167" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n6F-ZG-Vq1">
-                                                                <rect key="frame" x="0.0" y="57" width="98.5" height="17"/>
+                                                                <rect key="frame" x="0.0" y="56.5" width="74" height="17"/>
                                                                 <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="17"/>
-                                                                <nil key="textColor"/>
+                                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.45000000000000001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Крилаті ракети" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Jca-Df-Yt0">
-                                                                <rect key="frame" x="98.5" y="57" width="98.5" height="17"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Крилаті ракети" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="Jca-Df-Yt0">
+                                                                <rect key="frame" x="80" y="56.5" width="74" height="17"/>
                                                                 <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="17"/>
-                                                                <nil key="textColor"/>
+                                                                <color key="textColor" name="ClayCreekColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qiK-UT-WPM">
-                                                                <rect key="frame" x="197" y="57" width="98.5" height="17"/>
+                                                                <rect key="frame" x="160" y="56.5" width="74" height="17"/>
                                                                 <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="17"/>
-                                                                <nil key="textColor"/>
+                                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.45000000000000001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Кораблі" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="tcz-Nr-uSd">
-                                                                <rect key="frame" x="295.5" y="57" width="98.5" height="17"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Кораблі" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="tcz-Nr-uSd">
+                                                                <rect key="frame" x="240" y="56.5" width="74" height="17"/>
                                                                 <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="17"/>
-                                                                <nil key="textColor"/>
+                                                                <color key="textColor" name="ClayCreekColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
+                                                        <color key="backgroundColor" name="ChamoisColor"/>
                                                     </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="iVg-Qw-0Lk">
-                                                        <rect key="frame" x="0.0" y="222.5" width="394" height="74.5"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="bottom" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="iVg-Qw-0Lk">
+                                                        <rect key="frame" x="0.0" y="223.5" width="314" height="73.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2803" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pn2-S6-83C">
-                                                                <rect key="frame" x="0.0" y="57.5" width="98.5" height="17"/>
+                                                                <rect key="frame" x="0.0" y="56.5" width="74" height="17"/>
                                                                 <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="17"/>
-                                                                <nil key="textColor"/>
+                                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.45000000000000001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Автомобілі та автоцистерни" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="rbs-NU-aTa">
-                                                                <rect key="frame" x="98.5" y="40.5" width="98.5" height="34"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Автомобілі та автоцистерни" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="rbs-NU-aTa">
+                                                                <rect key="frame" x="80" y="40.5" width="74" height="33"/>
                                                                 <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="17"/>
-                                                                <nil key="textColor"/>
+                                                                <color key="textColor" name="ClayCreekColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="72" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qox-MA-G7b">
-                                                                <rect key="frame" x="197" y="57.5" width="98.5" height="17"/>
+                                                                <rect key="frame" x="160" y="56.5" width="74" height="17"/>
                                                                 <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="17"/>
-                                                                <nil key="textColor"/>
+                                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.45000000000000001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Спеціальна техніка" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ZXN-2y-SRN">
-                                                                <rect key="frame" x="295.5" y="40.5" width="98.5" height="34"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Спеціальна техніка" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="ZXN-2y-SRN">
+                                                                <rect key="frame" x="240" y="39.5" width="74" height="34"/>
                                                                 <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="17"/>
-                                                                <nil key="textColor"/>
+                                                                <color key="textColor" name="ClayCreekColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
+                                                        <color key="backgroundColor" name="ChamoisColor"/>
                                                     </stackView>
                                                 </subviews>
+                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" name="ClayCreekColor"/>
+                                        <color key="backgroundColor" name="ChamoisColor"/>
                                         <constraints>
-                                            <constraint firstItem="XR5-t8-Qzi" firstAttribute="leading" secondItem="7VS-nV-Mnx" secondAttribute="leading" constant="10" id="2tK-FT-FrP"/>
-                                            <constraint firstAttribute="trailing" secondItem="XR5-t8-Qzi" secondAttribute="trailing" constant="10" id="QOV-XR-LZf"/>
+                                            <constraint firstItem="XR5-t8-Qzi" firstAttribute="leading" secondItem="7VS-nV-Mnx" secondAttribute="leading" constant="50" id="2tK-FT-FrP"/>
+                                            <constraint firstAttribute="trailing" secondItem="XR5-t8-Qzi" secondAttribute="trailing" constant="50" id="QOV-XR-LZf"/>
                                             <constraint firstItem="XR5-t8-Qzi" firstAttribute="height" secondItem="7VS-nV-Mnx" secondAttribute="height" multiplier="0.7" id="nZq-r4-fsa"/>
-                                            <constraint firstItem="XR5-t8-Qzi" firstAttribute="top" secondItem="7VS-nV-Mnx" secondAttribute="top" constant="20" id="pZ5-DS-Vht"/>
+                                            <constraint firstItem="XR5-t8-Qzi" firstAttribute="top" secondItem="7VS-nV-Mnx" secondAttribute="top" id="pZ5-DS-Vht"/>
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="Erg-Gt-VV7" firstAttribute="leading" secondItem="6fw-8c-hJD" secondAttribute="leading" id="vj5-di-Rtv"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tLL-cl-OSo"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="ChamoisColor"/>
                         <constraints>
                             <constraint firstItem="tLL-cl-OSo" firstAttribute="bottom" secondItem="6fw-8c-hJD" secondAttribute="bottom" id="1sb-Y4-wAA"/>
                             <constraint firstItem="6fw-8c-hJD" firstAttribute="top" secondItem="tLL-cl-OSo" secondAttribute="top" id="YvC-r4-MUY"/>
@@ -375,7 +386,7 @@
                         <outlet property="lFieldArtilllery" destination="Q7s-ln-pc6" id="gwF-TX-iEn"/>
                         <outlet property="lHelicopterLose" destination="P8b-Tx-Agd" id="y2P-dy-VHv"/>
                         <outlet property="lMrl" destination="VFo-sJ-ZVa" id="Haw-Sh-Kah"/>
-                        <outlet property="lNavalShip" destination="qox-MA-G7b" id="ZIE-95-K5M"/>
+                        <outlet property="lNavalShip" destination="qiK-UT-WPM" id="AOZ-iu-uo1"/>
                         <outlet property="lPersonnelLose" destination="D8x-2g-NtE" id="DQv-c5-yAq"/>
                         <outlet property="lSpecialEquipment" destination="qox-MA-G7b" id="34v-De-9No"/>
                         <outlet property="lTankLose" destination="TkB-9g-Iqh" id="yNH-Er-dTl"/>
@@ -407,6 +418,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chmonia" width="575" height="1429"/>
         <namedColor name="ChamoisColor">
             <color red="0.92941176470588238" green="0.87450980392156863" blue="0.70196078431372544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -416,11 +428,5 @@
         <namedColor name="SandalColor">
             <color red="0.69019607843137254" green="0.60784313725490191" blue="0.44313725490196076" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGrayColor">
-            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
     </resources>
 </document>
