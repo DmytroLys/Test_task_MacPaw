@@ -3,8 +3,8 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -28,31 +28,31 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zvb-dh-2HZ" userLabel="NumberOfDaylabel">
-                                <rect key="frame" x="80" y="10" width="100" height="24"/>
+                                <rect key="frame" x="80" y="10" width="100" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="eeg-jP-taz"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="20"/>
+                                <color key="textColor" name="ClayCreekColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IgP-Qo-Dsl" userLabel="LossPersonnelLabel">
-                                <rect key="frame" x="80" y="49" width="150" height="18"/>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IgP-Qo-Dsl" userLabel="LossPersonnelLabel">
+                                <rect key="frame" x="80" y="60" width="150" height="19"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="Lw2-iF-oIe"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="19"/>
+                                <color key="textColor" name="ClayCreekColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBrownColor"/>
+                        <color key="backgroundColor" name="ChamoisColor"/>
                         <constraints>
                             <constraint firstItem="IgP-Qo-Dsl" firstAttribute="leading" secondItem="mSU-VJ-WUr" secondAttribute="trailing" constant="10" id="ChS-vv-z6a"/>
                             <constraint firstItem="Zvb-dh-2HZ" firstAttribute="leading" secondItem="mSU-VJ-WUr" secondAttribute="trailing" constant="10" id="GdT-9p-oM6"/>
                             <constraint firstItem="mSU-VJ-WUr" firstAttribute="leading" secondItem="qnI-w5-Eu2" secondAttribute="leading" constant="10" id="NKj-IF-Pck"/>
                             <constraint firstItem="mSU-VJ-WUr" firstAttribute="centerY" secondItem="qnI-w5-Eu2" secondAttribute="centerY" id="eBl-IH-dwh"/>
-                            <constraint firstItem="IgP-Qo-Dsl" firstAttribute="top" secondItem="Zvb-dh-2HZ" secondAttribute="bottom" constant="15" id="eDj-QW-hWc"/>
+                            <constraint firstItem="IgP-Qo-Dsl" firstAttribute="top" secondItem="Zvb-dh-2HZ" secondAttribute="bottom" constant="30" id="eDj-QW-hWc"/>
                             <constraint firstItem="Zvb-dh-2HZ" firstAttribute="top" secondItem="qnI-w5-Eu2" secondAttribute="top" constant="10" id="taR-ev-OrK"/>
                         </constraints>
                     </view>
@@ -65,6 +65,7 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" name="PavlovaColor"/>
             <connections>
                 <outlet property="cellView" destination="qnI-w5-Eu2" id="bSH-Yi-0lf"/>
                 <outlet property="lossPersonelLabel" destination="IgP-Qo-Dsl" id="eMx-XH-MTI"/>
@@ -75,8 +76,14 @@
     </objects>
     <resources>
         <image name="activism" width="512" height="512"/>
-        <systemColor name="systemBrownColor">
-            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
+        <namedColor name="ChamoisColor">
+            <color red="0.92941176470588238" green="0.87450980392156863" blue="0.70196078431372544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ClayCreekColor">
+            <color red="0.52941176470588236" green="0.50196078431372548" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="PavlovaColor">
+            <color red="0.84705882352941175" green="0.80000000000000004" blue="0.63921568627450975" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>
