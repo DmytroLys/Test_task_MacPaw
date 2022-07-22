@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 class Brain {
     
@@ -20,4 +21,26 @@ class Brain {
         }
         return ""
     }
+    
+    func percentOfLose (item: Int?, totalAmount:Int) -> CGFloat {
+        let endAngle: Double = 630
+        if let newItem = item {
+            let doubleNewItem = Double(newItem)
+            let doubleTotalAmount = Double(totalAmount)
+            var divided = doubleNewItem/doubleTotalAmount
+            divided = divided * endAngle
+
+            return CGFloat(divided)
+        }
+        return CGFloat(0)
+    }
+}
+
+struct Constant {
+    //The amount of vehicles intended for the invasion the Military Balance handbook
+    static let tanks = 1200
+    static let aircrafts = 330
+    static let helicopters = 240
+    static let apc = 2900
+    
 }
