@@ -104,7 +104,7 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "CustomTableViewCell") as? CustomTableViewCell {
             let currentData = lossesPersonnel[indexPath.row]
-            cell.numberOfDayLabel.text = "Day: \(currentData.day.description)"
+            cell.numberOfDayLabel.text = "День: \(currentData.day.description)"
             cell.lossPersonelLabel.text = "~ \(currentData.personnel) окупантів знищено"
             return cell
         }
