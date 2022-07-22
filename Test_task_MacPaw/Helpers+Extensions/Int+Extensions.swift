@@ -9,6 +9,6 @@ import Foundation
 
 extension Int {
     var formattedWithSeparator: String {
-        return Formatter.withSeparator.string(for: self) ?? ""
+        return Formatter.withSeparator.string(for: self) ?? "hohoho"
     }
 } 

@@ -23,6 +23,7 @@ struct LossesEquipmentData: Decodable {
         case mobileSRBM = "mobile SRBM system"
         case vehiclesAndFuel = "vehicles and fuel tanks"
         case cruiseMissiles =  "cruise missiles"
+        case navalShip = "naval ship"
     }
     
     enum StringOrInt: Decodable, CustomStringConvertible {
@@ -75,4 +76,5 @@ struct LossesEquipmentData: Decodable {
     var mobileSRBM : Int?
     var vehiclesAndFuel : Int?
     var cruiseMissiles : Int?
+    var navalShip: Int?
 }

@@ -57,7 +57,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="xlu-M9-hGj" userLabel="SVPersonnal">
-                                                <rect key="frame" x="15" y="20" width="300" height="125"/>
+                                                <rect key="frame" x="15" y="20" width="200" height="125"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Особисті втрати " textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hsp-u8-ZD6">
                                                         <rect key="frame" x="0.0" y="0.0" width="106.5" height="20"/>
@@ -66,7 +66,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wgS-Jj-AtZ">
-                                                        <rect key="frame" x="0.0" y="25" width="300" height="100"/>
+                                                        <rect key="frame" x="0.0" y="25" width="200" height="100"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D8x-2g-NtE">
                                                                 <rect key="frame" x="10" y="20" width="119.5" height="80"/>
@@ -88,7 +88,7 @@
                                                             <constraint firstItem="yyY-Tw-C31" firstAttribute="top" secondItem="wgS-Jj-AtZ" secondAttribute="top" constant="8" id="eth-uy-07c"/>
                                                             <constraint firstAttribute="bottom" secondItem="D8x-2g-NtE" secondAttribute="bottom" id="hGt-Sc-TjB"/>
                                                             <constraint firstItem="D8x-2g-NtE" firstAttribute="top" secondItem="wgS-Jj-AtZ" secondAttribute="top" constant="20" id="vfo-uo-tww"/>
-                                                            <constraint firstAttribute="width" constant="300" id="ykT-Vj-bd7"/>
+                                                            <constraint firstAttribute="width" constant="200" id="ykT-Vj-bd7"/>
                                                         </constraints>
                                                     </view>
                                                 </subviews>
@@ -97,8 +97,8 @@
                                         <color key="backgroundColor" name="ClayCreekColor"/>
                                         <constraints>
                                             <constraint firstItem="xlu-M9-hGj" firstAttribute="top" secondItem="Erg-Gt-VV7" secondAttribute="top" constant="20" id="1sc-gq-CWc"/>
-                                            <constraint firstAttribute="height" constant="150" id="56E-0T-uS9"/>
                                             <constraint firstItem="xlu-M9-hGj" firstAttribute="leading" secondItem="Erg-Gt-VV7" secondAttribute="leading" constant="15" id="9vZ-Vd-Q2q"/>
+                                            <constraint firstAttribute="height" constant="150" id="zkt-9j-hHF"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7o0-vd-Ji1">
@@ -204,11 +204,6 @@
                                                         </constraints>
                                                     </view>
                                                 </subviews>
-                                                <constraints>
-                                                    <constraint firstItem="ibp-1W-oDE" firstAttribute="width" secondItem="Cdo-rL-3cp" secondAttribute="width" id="3WV-L4-gwr"/>
-                                                    <constraint firstItem="DX3-hl-6qS" firstAttribute="width" secondItem="Cdo-rL-3cp" secondAttribute="width" id="EOD-di-1tS"/>
-                                                    <constraint firstItem="S0y-VC-Jem" firstAttribute="width" secondItem="ibp-1W-oDE" secondAttribute="width" id="WSi-R9-7Nk"/>
-                                                </constraints>
                                             </stackView>
                                         </subviews>
                                         <color key="backgroundColor" name="ClayCreekColor"/>
@@ -223,16 +218,134 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7VS-nV-Mnx">
                                         <rect key="frame" x="0.0" y="350" width="414" height="424"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ETE-Ie-XcV">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="424"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="XR5-t8-Qzi">
+                                                <rect key="frame" x="10" y="20" width="394" height="297"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="qEf-gI-osh">
+                                                        <rect key="frame" x="0.0" y="0.0" width="394" height="74"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="863" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q7s-ln-pc6">
+                                                                <rect key="frame" x="0.0" y="57" width="98.5" height="17"/>
+                                                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.45000000000000001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Гармати" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="n2F-K6-jBi">
+                                                                <rect key="frame" x="98.5" y="57" width="98.5" height="17"/>
+                                                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VFo-sJ-ZVa">
+                                                                <rect key="frame" x="197" y="57" width="98.5" height="17"/>
+                                                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.45000000000000001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="РСЗВ" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="5x3-sR-ESL">
+                                                                <rect key="frame" x="295.5" y="57" width="98.5" height="17"/>
+                                                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="1oQ-R8-9f3">
+                                                        <rect key="frame" x="0.0" y="74" width="394" height="74.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="113" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5pp-xk-Yv2">
+                                                                <rect key="frame" x="0.0" y="57.5" width="98.5" height="17"/>
+                                                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.45000000000000001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Засоби ППО" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="2sb-md-lFu">
+                                                                <rect key="frame" x="98.5" y="57.5" width="98.5" height="17"/>
+                                                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="713" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LgU-ql-99i">
+                                                                <rect key="frame" x="197" y="57.5" width="98.5" height="17"/>
+                                                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.45000000000000001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="БПЛА" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="5uU-jO-rCb">
+                                                                <rect key="frame" x="295.5" y="57.5" width="98.5" height="17"/>
+                                                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="Vzk-Du-EgR">
+                                                        <rect key="frame" x="0.0" y="148.5" width="394" height="74"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="167" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n6F-ZG-Vq1">
+                                                                <rect key="frame" x="0.0" y="57" width="98.5" height="17"/>
+                                                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.45000000000000001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Крилаті ракети" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Jca-Df-Yt0">
+                                                                <rect key="frame" x="98.5" y="57" width="98.5" height="17"/>
+                                                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qiK-UT-WPM">
+                                                                <rect key="frame" x="197" y="57" width="98.5" height="17"/>
+                                                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.45000000000000001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Кораблі" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="tcz-Nr-uSd">
+                                                                <rect key="frame" x="295.5" y="57" width="98.5" height="17"/>
+                                                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="iVg-Qw-0Lk">
+                                                        <rect key="frame" x="0.0" y="222.5" width="394" height="74.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2803" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pn2-S6-83C">
+                                                                <rect key="frame" x="0.0" y="57.5" width="98.5" height="17"/>
+                                                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.45000000000000001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Автомобілі та автоцистерни" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="rbs-NU-aTa">
+                                                                <rect key="frame" x="98.5" y="40.5" width="98.5" height="34"/>
+                                                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="72" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qox-MA-G7b">
+                                                                <rect key="frame" x="197" y="57.5" width="98.5" height="17"/>
+                                                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.45000000000000001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Спеціальна техніка" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ZXN-2y-SRN">
+                                                                <rect key="frame" x="295.5" y="40.5" width="98.5" height="34"/>
+                                                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
                                             </stackView>
                                         </subviews>
                                         <color key="backgroundColor" name="ClayCreekColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="ETE-Ie-XcV" secondAttribute="trailing" id="0CI-uQ-MFb"/>
-                                            <constraint firstItem="ETE-Ie-XcV" firstAttribute="top" secondItem="7VS-nV-Mnx" secondAttribute="top" id="TV1-7c-InC"/>
-                                            <constraint firstItem="ETE-Ie-XcV" firstAttribute="leading" secondItem="7VS-nV-Mnx" secondAttribute="leading" id="dVF-8A-4Uh"/>
-                                            <constraint firstAttribute="bottom" secondItem="ETE-Ie-XcV" secondAttribute="bottom" id="fka-S2-rGb"/>
+                                            <constraint firstItem="XR5-t8-Qzi" firstAttribute="leading" secondItem="7VS-nV-Mnx" secondAttribute="leading" constant="10" id="2tK-FT-FrP"/>
+                                            <constraint firstAttribute="trailing" secondItem="XR5-t8-Qzi" secondAttribute="trailing" constant="10" id="QOV-XR-LZf"/>
+                                            <constraint firstItem="XR5-t8-Qzi" firstAttribute="height" secondItem="7VS-nV-Mnx" secondAttribute="height" multiplier="0.7" id="nZq-r4-fsa"/>
+                                            <constraint firstItem="XR5-t8-Qzi" firstAttribute="top" secondItem="7VS-nV-Mnx" secondAttribute="top" constant="20" id="pZ5-DS-Vht"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -244,6 +357,7 @@
                             <constraint firstItem="tLL-cl-OSo" firstAttribute="bottom" secondItem="6fw-8c-hJD" secondAttribute="bottom" id="1sb-Y4-wAA"/>
                             <constraint firstItem="6fw-8c-hJD" firstAttribute="top" secondItem="tLL-cl-OSo" secondAttribute="top" id="YvC-r4-MUY"/>
                             <constraint firstItem="6fw-8c-hJD" firstAttribute="leading" secondItem="tLL-cl-OSo" secondAttribute="leading" id="baN-RP-yAd"/>
+                            <constraint firstItem="7o0-vd-Ji1" firstAttribute="width" secondItem="gLb-4i-w4l" secondAttribute="width" id="fMh-Bb-JXC"/>
                             <constraint firstItem="6fw-8c-hJD" firstAttribute="trailing" secondItem="tLL-cl-OSo" secondAttribute="trailing" id="fNy-TF-z5j"/>
                         </constraints>
                     </view>
@@ -254,10 +368,18 @@
                         <outlet property="helicopterView" destination="S0y-VC-Jem" id="xgp-Es-07b"/>
                         <outlet property="lAPCLose" destination="Ww8-Ta-ba4" id="fM3-dW-qlj"/>
                         <outlet property="lAircraftLose" destination="2yh-2F-9zt" id="LP2-JE-QRh"/>
+                        <outlet property="lAntiAircraftWarfare" destination="5pp-xk-Yv2" id="rtC-9n-9EW"/>
                         <outlet property="lChangePersonnelLose" destination="yyY-Tw-C31" id="el4-qk-ux4"/>
+                        <outlet property="lCruiseMissiles" destination="n6F-ZG-Vq1" id="DAG-MF-5S9"/>
+                        <outlet property="lDrone" destination="LgU-ql-99i" id="JVB-x3-Nzb"/>
+                        <outlet property="lFieldArtilllery" destination="Q7s-ln-pc6" id="gwF-TX-iEn"/>
                         <outlet property="lHelicopterLose" destination="P8b-Tx-Agd" id="y2P-dy-VHv"/>
+                        <outlet property="lMrl" destination="VFo-sJ-ZVa" id="Haw-Sh-Kah"/>
+                        <outlet property="lNavalShip" destination="qox-MA-G7b" id="ZIE-95-K5M"/>
                         <outlet property="lPersonnelLose" destination="D8x-2g-NtE" id="DQv-c5-yAq"/>
+                        <outlet property="lSpecialEquipment" destination="qox-MA-G7b" id="34v-De-9No"/>
                         <outlet property="lTankLose" destination="TkB-9g-Iqh" id="yNH-Er-dTl"/>
+                        <outlet property="lVehiclesAndFuel" destination="Pn2-S6-83C" id="UrP-V4-ghN"/>
                         <outlet property="tanksView" destination="DX3-hl-6qS" id="nGs-wD-CHd"/>
                     </connections>
                 </viewController>

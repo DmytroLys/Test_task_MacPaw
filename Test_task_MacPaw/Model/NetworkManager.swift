@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import UIKit
 
 protocol NetworkManagerDelegate {
     func getData<T>(_ networkManager:NetworkManager, array: [T])
@@ -53,8 +52,8 @@ struct NetworkManager {
         let decoder = JSONDecoder()
         do {
             
-            let correctData = hadndleNanValue(inputData: lossPersonnelData)
-            let decodedData = try decoder.decode([LossesPersonnelData].self, from: correctData)
+//            let correctData = hadndleNanValue(inputData: lossPersonnelData)
+            let decodedData = try decoder.decode([LossesPersonnelData].self, from: lossPersonnelData)
             
             return decodedData
             
@@ -67,8 +66,8 @@ struct NetworkManager {
     func parseJson(lossEquipmentData: Data) -> [LossesEquipmentData]? {
         let decoder = JSONDecoder()
         do {
-            let correctData = hadndleNanValue(inputData: lossEquipmentData)
-            let decodedData = try decoder.decode([LossesEquipmentData].self, from: correctData)
+//            let correctData = hadndleNanValue(inputData: lossEquipmentData)
+            let decodedData = try decoder.decode([LossesEquipmentData].self, from: lossEquipmentData)
             
             return decodedData
             
@@ -78,13 +77,13 @@ struct NetworkManager {
         }
     }
     
-    func hadndleNanValue (inputData:Data) -> Data {
-        
-        let dataString = String(decoding: inputData, as: UTF8.self)
-        let correctString = dataString.replacingOccurrences(of: "NaN", with: "-1")
-        let correctData = correctString.data(using: .utf8)!
-        
-        return correctData
-    }
+//    func hadndleNanValue (inputData:Data) -> Data {
+//
+//        let dataString = String(decoding: inputData, as: UTF8.self)
+//        let correctString = dataString.replacingOccurrences(of: "NaN", with: "-1")
+//        let correctData = correctString.data(using: .utf8)!
+//
+//        return correctData
+//    }
 }
 

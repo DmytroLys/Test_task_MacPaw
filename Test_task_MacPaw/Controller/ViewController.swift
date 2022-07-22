@@ -69,6 +69,7 @@ class ViewController: UIViewController, NetworkManagerDelegate {
 extension ViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         currentRowPlData = lossesPersonnel[indexPath.row]
         currentRowElData = lossesEquipment[indexPath.row]
         self.performSegue(withIdentifier: "goToDetail", sender: self)

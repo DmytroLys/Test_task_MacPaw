@@ -17,14 +17,23 @@ class DetailViewController: UIViewController {
     @IBOutlet private var lAircraftLose: UILabel!
     @IBOutlet private var lHelicopterLose: UILabel!
     
+    @IBOutlet var lFieldArtilllery: UILabel!
+    @IBOutlet var lAntiAircraftWarfare: UILabel!
+    @IBOutlet var lCruiseMissiles: UILabel!
+    @IBOutlet var lVehiclesAndFuel: UILabel!
+    @IBOutlet var lMrl: UILabel!
+    @IBOutlet var lDrone: UILabel!
+    @IBOutlet var lNavalShip: UILabel!
+    @IBOutlet var lSpecialEquipment: UILabel!
+    
+    
     @IBOutlet private var tanksView: UIView!
     @IBOutlet private var bbmView: UIView!
     @IBOutlet private var aircraftView: UIView!
     @IBOutlet private var helicopterView: UIView!
     
-    @IBOutlet var firstTableView: UITableView!
-    @IBOutlet var secondTableView: UITableView!
     
+    var ss: Int? = nil
     
     var currentDayPersonnelLose: LossesPersonnelData?
     var currentDayEquipmentLose: LossesEquipmentData?
@@ -34,41 +43,58 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        navigationItem.title = "Статистика за 97 день війни"
+ 
+        navigationItem.title = "Статистика за \(currentDayPersonnelLose?.day.description ?? "") день війни"
         
         setupUI()
-        
     }
     
     private func setupUI () {
         circleHelper.createInnerCircle(startAngle: 0, endAngle: 360, view: tanksView)
         circleHelper.createCircle(startAngle: 270, endAngle: 630, view: tanksView)
-
+        
         circleHelper.createInnerCircle(startAngle: 0, endAngle: 360, view: bbmView)
         circleHelper.createCircle(startAngle: 270, endAngle: 630, view: bbmView)
-
+        
         circleHelper.createInnerCircle(startAngle: 0, endAngle: 360, view: aircraftView)
         circleHelper.createCircle(startAngle: 270, endAngle: 630, view: aircraftView)
-
+        
         circleHelper.createInnerCircle(startAngle: 0, endAngle: 360, view: helicopterView)
         circleHelper.createCircle(startAngle: 270, endAngle: 630, view: helicopterView)
         
         if let Pdata = currentDayPersonnelLose {
+            
             lPersonnelLose.text = Pdata.personnel.formattedWithSeparator
         }
         
         if let Edata = currentDayEquipmentLose {
+            
             lTankLose.text = Edata.tank.formattedWithSeparator
             lAPCLose.text = Edata.apc.formattedWithSeparator
             lAircraftLose.text = Edata.aircraft.formattedWithSeparator
             lHelicopterLose.text = Edata.helicopter.formattedWithSeparator
-        }
-        
-        
+            lFieldArtilllery.text = Edata.fieldArtillery.formattedWithSeparator
+            lAntiAircraftWarfare.text =  Edata.antiAircraftWarfare.formattedWithSeparator
+            lCruiseMissiles.text = Edata.cruiseMissiles?.formattedWithSeparator ?? "-"
+            lVehiclesAndFuel.text = {
+                if let one = Edata.fuelTank {
+                    if let two = Edata.militaryAuto {
+                        let sum = one + two
+                        return sum.formattedWithSeparator
+                    }
+                }
+                
+                return Edata.vehiclesAndFuel?.formattedWithSeparator
+            }()
+            
+            lMrl.text = Edata.mrl.formattedWithSeparator
+            lDrone.text = Edata.drone.formattedWithSeparator
+            lNavalShip.text = Edata.navalShip?.formattedWithSeparator
+            lSpecialEquipment.text = Edata.specialEquipment?.formattedWithSeparator ?? "-"
         
     }
-    
-    
-    
+
+}
+
+
 }
