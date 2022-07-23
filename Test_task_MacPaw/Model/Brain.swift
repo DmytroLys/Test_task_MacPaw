@@ -23,13 +23,16 @@ class Brain {
     }
     
     func percentOfLose (item: Int?, totalAmount:Int) -> CGFloat {
-        let endAngle: Double = 630
+        let endAngle: Double = 360
         if let newItem = item {
             let doubleNewItem = Double(newItem)
             let doubleTotalAmount = Double(totalAmount)
             var divided = doubleNewItem/doubleTotalAmount
             divided = divided * endAngle
 
+            if divided > 360 {
+                return CGFloat(endAngle)
+            }
             return CGFloat(divided)
         }
         return CGFloat(0)

@@ -61,19 +61,19 @@ class DetailViewController: UIViewController {
         if let Edata = currentDayEquipmentLose {
             
             circleHelper.createInnerCircle(startAngle: 0, endAngle: 360, view: tanksView)
-            circleHelper.createCircle(startAngle: 270, endAngle:
+            circleHelper.createCircle(startAngle: 0, endAngle:
                                         brain.percentOfLose(item: currentDayEquipmentLose?.tank, totalAmount: Constant.tanks ), view: tanksView)
             
             circleHelper.createInnerCircle(startAngle: 0, endAngle: 360, view: bbmView)
-            circleHelper.createCircle(startAngle: 270, endAngle:
+            circleHelper.createCircle(startAngle: 0, endAngle:
                                         brain.percentOfLose(item: currentDayEquipmentLose?.apc, totalAmount: Constant.apc), view: bbmView)
             
             circleHelper.createInnerCircle(startAngle: 0, endAngle: 360, view: aircraftView)
-            circleHelper.createCircle(startAngle: 270, endAngle:
+            circleHelper.createCircle(startAngle: 0, endAngle:
                                         brain.percentOfLose(item: currentDayEquipmentLose?.aircraft, totalAmount: Constant.aircrafts), view: aircraftView)
             
             circleHelper.createInnerCircle(startAngle: 0, endAngle: 360, view: helicopterView)
-            circleHelper.createCircle(startAngle: 270, endAngle:
+            circleHelper.createCircle(startAngle: 0, endAngle:
                                         brain.percentOfLose(item: currentDayEquipmentLose?.helicopter, totalAmount: Constant.helicopters), view: helicopterView)
             
             lTankLose.text = Edata.tank.formattedWithSeparator
