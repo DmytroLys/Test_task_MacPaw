@@ -4,7 +4,7 @@
 2. Create localize information
 3. need to sign app in Certificates, Identifiers & Profiles
 4. Load build in TestFlight
-5. Create marceting materials and tags
+5. Create marketing materials and tags
 6. Send working build in TestFlight to review on Apple
 
 
