@@ -26,7 +26,8 @@ on the other – detailed information on the chosen element;
 ## Features
 List the ready features here:
 - Creates circles for show equipment losses
-- handleNaNValues fron Json
+- handleNaNValues from Json
+
 
 
 
